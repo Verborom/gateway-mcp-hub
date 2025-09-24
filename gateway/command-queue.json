@@ -97,7 +97,20 @@
       "timestamp": 1758676998698,
       "result": "stdout:\nmcp-gateway\n7900c2aafe504ae1e0a91d5a1651c39c479ce84be54be896ec5c077dee7752cd\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758677050133_hptingn2n",
+      "type": "shell",
+      "command": "docker ps | grep mcp-gateway && echo '---LOGS---' && docker logs mcp-gateway 2>&1 | tail -10",
+      "args": {
+        "description": "Check container status and logs"
+      },
+      "status": "completed",
+      "timestamp": 1758677050133,
+      "result": "7900c2aafe50   node:20-slim   \"docker-entrypoint.s…\"   50 seconds ago   Restarting (0) 22 seconds ago             mcp-gateway\n---LOGS---\nRemoved lock file on exit\nCreated lock file with PID 8\nGateway MCP server running on stdio (PID 8)\nRemoved lock file on exit\nCreated lock file with PID 8\nGateway MCP server running on stdio (PID 8)\nRemoved lock file on exit\nCreated lock file with PID 8\nGateway MCP server running on stdio (PID 8)\nRemoved lock file on exit\n",
+      "error": "",
+      "completedAt": 1758677050767
     }
   ],
-  "lastModified": 1758677000423
+  "lastModified": 1758677050133
 }
