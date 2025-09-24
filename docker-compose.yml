@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  gateway:
+    build: ./gateway
+    container_name: mcp-gateway
+    restart: unless-stopped
+    ports:
+      - "3456:3456"  # HTTP API
+      - "8080:8080"  # Future iPhone bridge
+    volumes:
+      # Persist state between restarts
+      - ./data/state:/data/state
+      - ./data/queue:/data/queue
+      - ./data/logs:/data/logs
+      - ./gateway/command-queue.json:/app/command-queue.json
+      # Development volumes for live updates
+      - ./gateway/src:/app/src
+      - ./gateway/dist:/app/dist
+    environment:
+      - NODE_ENV=production
+      - LOG_LEVEL=info
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - PINECONE_INDEX=${PINECONE_INDEX}
+      - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - TWILIO_PHONE_NUMBER=${TWILIO_PHONE_NUMBER}
+      - USER_PHONE_NUMBER=${USER_PHONE_NUMBER}
+    stdin_open: true
+    tty: true
+    networks:
+      - mcp-network
+
+  # Future: Pinecone sync service
+  pinecone-sync:
+    image: node:20-alpine
+    container_name: mcp-pinecone
+    restart: unless-stopped
+    volumes:
+      - ./pinecone:/app
+      - ./data/vectors:/data/vectors
+    environment:
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - PINECONE_INDEX=${PINECONE_INDEX}
+    command: ["echo", "Pinecone sync service placeholder"]
+    networks:
+      - mcp-network
+
+  # Future: iPhone bridge service  
+  iphone-bridge:
+    image: node:20-alpine
+    container_name: mcp-iphone
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./iphone-bridge:/app
+    environment:
+      - GATEWAY_URL=http://gateway:3456
+      - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+    command: ["echo", "iPhone bridge placeholder"]
+    networks:
+      - mcp-network
+
+networks:
+  mcp-network:
+    driver: bridge
+
+volumes:
+  state:
+  queue:
+  logs:
