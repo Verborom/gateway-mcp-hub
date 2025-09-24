@@ -43,9 +43,11 @@
       "args": {
         "description": "List the available Pinecone MCP tools by checking the exports. GROUND RULES: DO NOT modify. ONLY investigate what tools exist."
       },
-      "status": "pending",
-      "timestamp": 1758687118899
+      "status": "completed",
+      "timestamp": 1758687118899,
+      "result": "stdout:\n        name: \"store_context\",\n        name: \"load_full_context\",\n        name: \"search_history\",\n        name: \"mark_required_reading\",\n            const namespace = args.namespace || 'conversations';\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758687118899
+  "lastModified": 1758687119899
 }
