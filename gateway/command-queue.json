@@ -60,7 +60,20 @@
       "timestamp": 1758683374157,
       "result": "stdout:\nsrc/http-bridge-standalone.ts(73,35): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge-standalone.ts(106,28): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge.ts(2,10): error TS2305: Module '\"./tools/command-queue.js\"' has no exported member 'commandQueue'.\nsrc/http-bridge.ts(2,24): error TS2305: Module '\"./tools/command-queue.js\"' has no exported member 'commandResults'.\nsrc/http-bridge.ts(9,29): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge.ts(10,39): error TS7006: Parameter 'cmd' implicitly has an 'any' type.\nsrc/http-bridge.ts(22,39): error TS7006: Parameter 'cmd' implicitly has an 'any' type.\nsrc/http-bridge.ts(35,22): error TS6133: 'req' is declared but its value is never read.\nsrc/http-server.ts(15,18): error TS7016: Could not find a declaration file for module 'cors'. '/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/cors/lib/index.js' implicitly has an 'any' type.\n  Try `npm i --save-dev @types/cors` if it exists or add a new declaration (.d.ts) file containing `declare module 'cors';`\nsrc/http-server.ts(29,21): error TS6133: 'req' is declared but its value is never read.\nsrc/http-server.ts(330,24): error TS6133: 'req' is declared but its value is never read.\nsrc/tools/pinecone-rag.ts(129,45): error TS7006: Parameter 'match' implicitly has an 'any' type.\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758683410436_10uilqv79",
+      "type": "shell",
+      "command": "ls -la /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/tools/",
+      "args": {
+        "description": "Check what files exist in tools directory"
+      },
+      "status": "completed",
+      "timestamp": 1758683410436,
+      "result": "total 32\ndrwxr-xr-x@ 8 eatatjoes  staff   256 Sep 23 22:08 .\ndrwxr-xr-x@ 8 eatatjoes  staff   256 Sep 23 22:08 ..\n-rw-r--r--@ 1 eatatjoes  staff  5836 Sep 23 02:40 command-queue.ts\ndrwxr-xr-x@ 2 eatatjoes  staff    64 Sep 23 22:04 docker\ndrwxr-xr-x@ 2 eatatjoes  staff    64 Sep 23 22:04 phone\ndrwxr-xr-x@ 3 eatatjoes  staff    96 Sep 23 22:08 pinecone\n-rw-r--r--@ 1 eatatjoes  staff  4301 Sep 23 20:13 pinecone-rag.ts\ndrwxr-xr-x@ 2 eatatjoes  staff    64 Sep 23 22:04 pycharm\n",
+      "error": "",
+      "completedAt": 1758683410972
     }
   ],
-  "lastModified": 1758683375680
+  "lastModified": 1758683410436
 }
