@@ -7,8 +7,11 @@
       "args": {
         "description": "Check if HTTP server is still running on port 3456"
       },
-      "status": "pending",
-      "timestamp": 1758676044825
+      "status": "completed",
+      "timestamp": 1758676044825,
+      "result": "{\n    \"status\": \"healthy\",\n    \"queue_size\": 0,\n    \"state_keys\": 0,\n    \"timestamp\": \"2025-09-24T01:07:25.154Z\"\n}\n",
+      "error": "",
+      "completedAt": 1758676045196
     }
   ],
   "lastModified": 1758676044825
