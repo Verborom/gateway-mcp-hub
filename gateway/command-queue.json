@@ -19,9 +19,9 @@
       "args": {
         "description": "Install Pinecone and OpenAI dependencies"
       },
-      "status": "pending",
+      "status": "running",
       "timestamp": 1758683262999
     }
   ],
-  "lastModified": 1758683262999
+  "lastModified": 1758683263415
 }
