@@ -43,7 +43,7 @@
       "args": {
         "description": "Rebuild gateway with fixed TypeScript"
       },
-      "status": "pending",
+      "status": "running",
       "timestamp": 1758683352630
     }
   ],
