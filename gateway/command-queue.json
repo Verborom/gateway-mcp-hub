@@ -47,7 +47,17 @@
       "timestamp": 1758683902043,
       "result": "stdout:\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758683926553_no457c072",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node test-pinecone.js 2>&1",
+      "args": {
+        "description": "Test the complete Pinecone RAG system - run the test and report the results"
+      },
+      "status": "pending",
+      "timestamp": 1758683926553
     }
   ],
-  "lastModified": 1758683902083
+  "lastModified": 1758683926553
 }
