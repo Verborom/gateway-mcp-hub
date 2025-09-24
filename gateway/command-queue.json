@@ -23,7 +23,17 @@
       "timestamp": 1758683262999,
       "result": "stdout:\n\nadded 1 package, and audited 135 packages in 1s\n\n23 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758683282141_ao0sd7h0t",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm run build 2>&1 | tail -20",
+      "args": {
+        "description": "Rebuild gateway with Pinecone integration"
+      },
+      "status": "running",
+      "timestamp": 1758683282141
     }
   ],
-  "lastModified": 1758683264753
+  "lastModified": 1758683282812
 }
