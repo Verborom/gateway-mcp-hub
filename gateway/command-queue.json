@@ -61,7 +61,17 @@
       "timestamp": 1758674659815,
       "result": "stdout:\nTerminal history saved\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758674671412_arzcmp1md",
+      "type": "shell",
+      "command": "ps aux | grep -E '(code-daemon|http-server)' > /Users/eatatjoes/Desktop/Dev/MCP/processes_backup_$(date +%Y%m%d_%H%M%S).txt && cp /Users/eatatjoes/Desktop/Dev/MCP/gateway/http-server.log /Users/eatatjoes/Desktop/Dev/MCP/http_server_backup_$(date +%Y%m%d_%H%M%S).log 2>/dev/null; echo \"Process info and logs backed up\"",
+      "args": {
+        "description": "Also save daemon output and HTTP server log"
+      },
+      "status": "pending",
+      "timestamp": 1758674671412
     }
   ],
-  "lastModified": 1758674660128
+  "lastModified": 1758674671412
 }
