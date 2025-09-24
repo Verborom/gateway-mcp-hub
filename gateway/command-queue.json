@@ -37,7 +37,17 @@
       "timestamp": 1758676489939,
       "result": "stdout:\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758676613171_zpdw7jwb2",
+      "type": "shell",
+      "command": "docker --version && docker ps",
+      "args": {
+        "description": "Check Docker is installed and running"
+      },
+      "status": "pending",
+      "timestamp": 1758676613171
     }
   ],
-  "lastModified": 1758676490556
+  "lastModified": 1758676613171
 }
