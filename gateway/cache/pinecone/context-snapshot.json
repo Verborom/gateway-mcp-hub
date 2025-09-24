@@ -138334,6 +138334,13 @@
   },
   "conversations": [
     {
+      "id": "required_1758689854730_pndtvlv52",
+      "content": "SECRET WORD TEST: The user has established a secret word for testing continuity. The SECRET WORD is the number 42 (forty-two). If asked what the secret word is, respond with: 42",
+      "role": "system",
+      "timestamp": "2025-09-24T04:57:35.228Z",
+      "tokens": 45
+    },
+    {
       "id": "required_1758688726316_6mjtt5ev0",
       "content": "CRITICAL: This is must-read documentation",
       "role": "system",
@@ -138346,40 +138353,8 @@
       "role": "system",
       "timestamp": "2025-09-24T03:25:25.505Z",
       "tokens": 46
-    },
-    {
-      "id": "test_context_1758689855756_0pf69025w",
-      "content": "User is testing RAG continuity with secret word: 42",
-      "role": "test_context",
-      "session_id": "default",
-      "timestamp": "2025-09-24T04:57:36.421Z",
-      "tokens": 13
-    },
-    {
-      "id": "test_context_1758689856494_9id9mnwmw",
-      "content": "The purpose is to prove new sessions have full context",
-      "role": "test_context",
-      "session_id": "default",
-      "timestamp": "2025-09-24T04:57:37.109Z",
-      "tokens": 14
-    },
-    {
-      "id": "test_context_1758689857132_8l2o5astv",
-      "content": "If this works, new conversations will know everything",
-      "role": "test_context",
-      "session_id": "default",
-      "timestamp": "2025-09-24T04:57:38.831Z",
-      "tokens": 14
-    },
-    {
-      "id": "test_context_1758689858863_k7i4wnwhe",
-      "content": "The number 42 is the secret word for testing",
-      "role": "test_context",
-      "session_id": "default",
-      "timestamp": "2025-09-24T04:57:40.343Z",
-      "tokens": 11
     }
   ],
-  "lastSync": 1758689837277,
-  "totalTokens": 109
+  "lastSync": 1758689867170,
+  "totalTokens": 102
 }
