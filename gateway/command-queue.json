@@ -81,9 +81,11 @@
       "args": {
         "description": "Kill the HTTP server on port 3456"
       },
-      "status": "pending",
-      "timestamp": 1758676952489
+      "status": "completed",
+      "timestamp": 1758676952489,
+      "result": "stdout:\nPort 3456 cleared\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758676952489
+  "lastModified": 1758676953704
 }
