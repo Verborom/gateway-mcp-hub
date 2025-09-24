@@ -47,7 +47,17 @@
       "timestamp": 1758687118899,
       "result": "stdout:\n        name: \"store_context\",\n        name: \"load_full_context\",\n        name: \"search_history\",\n        name: \"mark_required_reading\",\n            const namespace = args.namespace || 'conversations';\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758687138008_zxj8ped42",
+      "type": "shell",
+      "command": "ps aux | grep -E 'code-daemon' | grep -v grep",
+      "args": {
+        "description": "Check if code-daemon-v2 is running. GROUND RULES: DO NOT start or stop anything. ONLY check and report status."
+      },
+      "status": "pending",
+      "timestamp": 1758687138008
     }
   ],
-  "lastModified": 1758687119899
+  "lastModified": 1758687138008
 }
