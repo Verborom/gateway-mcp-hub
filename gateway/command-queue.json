@@ -12,7 +12,17 @@
       "result": "[CODE] Test suite created\n",
       "error": "",
       "completedAt": 1758688689490
+    },
+    {
+      "id": "cmd_1758688711066_6pezz4en5",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node test-rag-proof.js 2>&1",
+      "args": {
+        "description": "Run comprehensive RAG test suite. GROUND RULES: ONLY execute test, do not modify anything. Report full results."
+      },
+      "status": "running",
+      "timestamp": 1758688711066
     }
   ],
-  "lastModified": 1758688689111
+  "lastModified": 1758688711066
 }
