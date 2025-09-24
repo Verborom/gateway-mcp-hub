@@ -58410,37 +58410,20 @@
   },
   "conversations": [
     {
+      "id": "required_1758688726316_6mjtt5ev0",
+      "content": "CRITICAL: This is must-read documentation",
+      "role": "system",
+      "timestamp": "2025-09-24T04:38:46.973Z",
+      "tokens": 11
+    },
+    {
       "id": "required_1758684325195_usr42xu70",
       "content": "GROUND RULES: DO NOT modify files unless instructed. DO NOT fix without permission. DO NOT install packages unless requested. ONLY do exactly what is asked. Report errors, do not fix.",
       "role": "system",
       "timestamp": "2025-09-24T03:25:25.505Z",
       "tokens": 46
-    },
-    {
-      "id": "test_1758688711706_folroi86p",
-      "content": "Test message at 2025-09-24T04:38:31.705Z",
-      "role": "test",
-      "session_id": "proof_test",
-      "timestamp": "2025-09-24T04:38:33.786Z",
-      "tokens": 10
-    },
-    {
-      "id": "test_1758688724873_15p21hyc7",
-      "content": "Test message at 2025-09-24T04:38:44.873Z",
-      "role": "test",
-      "session_id": "proof_test",
-      "timestamp": "2025-09-24T04:38:46.088Z",
-      "tokens": 10
-    },
-    {
-      "id": "embed_test_1758688728765_0ikxk692l",
-      "content": "Unique test 9l1b1s",
-      "role": "embed_test",
-      "session_id": "default",
-      "timestamp": "2025-09-24T04:38:49.723Z",
-      "tokens": 5
     }
   ],
-  "lastSync": 1758688696255,
-  "totalTokens": 71
+  "lastSync": 1758688756278,
+  "totalTokens": 57
 }
