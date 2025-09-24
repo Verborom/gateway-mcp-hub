@@ -50,7 +50,17 @@
       "result": "",
       "error": "Command failed: docker --version && docker ps\nCannot connect to the Docker daemon at unix:///Users/eatatjoes/.docker/run/docker.sock. Is the docker daemon running?\n",
       "completedAt": 1758676613909
+    },
+    {
+      "id": "cmd_1758676626959_jd4xu6fzq",
+      "type": "shell",
+      "command": "open -a Docker",
+      "args": {
+        "description": "Start Docker Desktop app"
+      },
+      "status": "running",
+      "timestamp": 1758676626959
     }
   ],
-  "lastModified": 1758676613171
+  "lastModified": 1758676627148
 }
