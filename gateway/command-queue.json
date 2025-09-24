@@ -25,7 +25,17 @@
       "result": "\n🔬 DEFINITIVE RAG SYSTEM TEST\n==================================================\n\n📝 TEST 1: Store & Retrieve Message\n[Cache Miss] Generating embedding for hash 4669f1b8...\n[Cache Hit] Embedding for hash 4669f1b8...\nTypeError: found.results[0].includes is not a function\n    at test1_StoreAndRetrieve (file:///Users/eatatjoes/Desktop/Dev/MCP/gateway/test-rag-proof.js:31:73)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async runAllTests (file:///Users/eatatjoes/Desktop/Dev/MCP/gateway/test-rag-proof.js:129:21)\n",
       "error": "",
       "completedAt": 1758688714020
+    },
+    {
+      "id": "cmd_1758688724223_7ax5a9pgs",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && sed -i '' 's/found.results\\[0\\].includes/JSON.stringify(found.results[0]).includes/g' test-rag-proof.js && node test-rag-proof.js 2>&1",
+      "args": {
+        "description": "Fix test bug and run again. GROUND RULES: Fix ONLY the test file bug, nothing else."
+      },
+      "status": "pending",
+      "timestamp": 1758688724223
     }
   ],
-  "lastModified": 1758688711066
+  "lastModified": 1758688724223
 }
