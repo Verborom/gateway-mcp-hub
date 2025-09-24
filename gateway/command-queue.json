@@ -44,9 +44,11 @@
       "args": {
         "description": "Start Pinecone sync daemon in background. GROUND RULES: ONLY start daemon, do not modify files."
       },
-      "status": "running",
-      "timestamp": 1758687705049
+      "status": "error",
+      "timestamp": 1758687705049,
+      "result": "",
+      "error": "Command 'cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && nohup node pinecone-sync-daemon.js > /tmp/pinecone-sync.log 2>&1 & echo \"[CODE] Sync daemon started with PID: $!\"' timed out after 30 seconds"
     }
   ],
-  "lastModified": 1758687705726
+  "lastModified": 1758687735739
 }
