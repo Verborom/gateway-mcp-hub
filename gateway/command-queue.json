@@ -193,9 +193,11 @@
       "args": {
         "description": "Check if HTTP server is running"
       },
-      "status": "pending",
-      "timestamp": 1758674451897
+      "status": "completed",
+      "timestamp": 1758674451897,
+      "result": "stdout:\n{\n    \"status\": \"healthy\",\n    \"queue_size\": 0,\n    \"state_keys\": 0,\n    \"timestamp\": \"2025-09-24T00:40:53.170Z\"\n}\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758674451897
+  "lastModified": 1758674453197
 }
