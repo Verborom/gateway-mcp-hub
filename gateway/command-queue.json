@@ -132,10 +132,11 @@
       "args": {
         "description": "Rebuild the gateway to compile TypeScript to JavaScript"
       },
-      "status": "completed",
+      "status": "error",
       "timestamp": 1758663555958,
-      "result": "stdout:\n\n> gateway@1.0.0 build\n> tsc\n\nsrc/http-bridge-standalone.ts(73,35): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge-standalone.ts(106,28): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge.ts(2,10): error TS2305: Module '\"./tools/command-queue.js\"' has no exported member 'commandQueue'.\nsrc/http-bridge.ts(2,24): error TS2305: Module '\"./tools/command-queue.js\"' has no exported member 'commandResults'.\nsrc/http-bridge.ts(9,29): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge.ts(10,39): error TS7006: Parameter 'cmd' implicitly has an 'any' type.\nsrc/http-bridge.ts(22,39): error TS7006: Parameter 'cmd' implicitly has an 'any' type.\nsrc/http-bridge.ts(35,22): error TS6133: 'req' is declared but its value is never read.\n\nstderr:\n\nreturn_code: 2",
-      "error": ""
+      "result": "",
+      "error": "Command failed: cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm run build\n",
+      "completedAt": 1758674235705
     },
     {
       "id": "cmd_1758673911581_d6a0ztqju",
@@ -144,9 +145,12 @@
       "args": {
         "description": "Test npm scripts in gateway project"
       },
-      "status": "pending",
-      "timestamp": 1758673911581
+      "status": "completed",
+      "timestamp": 1758673911581,
+      "result": "\n> gateway@1.0.0 test\n> echo \"Error: no test specified\" && exit 1\n\nError: no test specified\nNo tests configured\n",
+      "error": "",
+      "completedAt": 1758674235878
     }
   ],
-  "lastModified": 1758674235007
+  "lastModified": 1758673911581
 }
