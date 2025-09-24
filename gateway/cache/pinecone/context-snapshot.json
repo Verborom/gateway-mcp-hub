@@ -9224,7 +9224,16 @@
       0.021857963874936104
     ]
   },
-  "conversations": [],
+  "conversations": [
+    {
+      "id": "desktop_1758684320127_chk3reqao",
+      "content": "Project: Gateway MCP Hub - Central router for tool integrations",
+      "role": "desktop",
+      "session_id": "test_session_001",
+      "timestamp": "2025-09-24T03:25:21.958Z",
+      "tokens": 16
+    }
+  ],
   "lastSync": 1758683928488,
-  "totalTokens": 0
+  "totalTokens": 16
 }
