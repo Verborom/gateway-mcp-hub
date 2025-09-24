@@ -56,7 +56,7 @@
       "args": {
         "description": "Build the MCP Gateway Docker container"
       },
-      "status": "pending",
+      "status": "running",
       "timestamp": 1758676677154
     }
   ],
