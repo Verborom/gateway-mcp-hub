@@ -397,3 +397,44 @@ export async function initContext() {
   console.error('[Auto-Init] Context loaded successfully');
   return result;
 }
+
+// AUTO-INIT TOOL FOR NEW SESSIONS
+export const initSessionTool = {
+  name: "init_session",
+  description: "Initialize new session with full context - call this FIRST in new conversations",
+  inputSchema: {
+    type: "object",
+    properties: {
+      silent: {
+        type: "boolean",
+        description: "Load silently without output",
+        default: true
+      }
+    }
+  }
+};
+
+export async function handleInitSession(args: any): Promise<string> {
+  try {
+    const context = await handlePineconeTool('load_full_context', {
+      token_limit: 50000
+    });
+    
+    const parsed = JSON.parse(context);
+    
+    // Store in memory for this session
+    global.sessionContext = parsed;
+    global.sessionInitialized = true;
+    
+    if (!args.silent) {
+      return `Session initialized with ${parsed.message_count} messages (${parsed.token_count} tokens)`;
+    }
+    
+    return "Session context loaded successfully";
+  } catch (err) {
+    return `Failed to initialize session: ${err.message}`;
+  }
+}
+
+// Add to exports
+pineconeTools.push(initSessionTool);
