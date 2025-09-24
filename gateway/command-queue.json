@@ -11,7 +11,17 @@
       "timestamp": 1758683090117,
       "result": "stdout:\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758683262999_ams17dusk",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm install @pinecone-database/pinecone openai dotenv",
+      "args": {
+        "description": "Install Pinecone and OpenAI dependencies"
+      },
+      "status": "pending",
+      "timestamp": 1758683262999
     }
   ],
-  "lastModified": 1758683090704
+  "lastModified": 1758683262999
 }
