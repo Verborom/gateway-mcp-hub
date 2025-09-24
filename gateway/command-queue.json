@@ -107,8 +107,11 @@
       "args": {
         "description": "Compile TypeScript to include auto-init. GROUND RULES: ONLY compile, do not modify source files."
       },
-      "status": "running",
-      "timestamp": 1758687456074
+      "status": "completed",
+      "timestamp": 1758687456074,
+      "result": "src/http-bridge.ts(35,22): error TS6133: 'req' is declared but its value is never read.\nsrc/http-server.ts(15,18): error TS7016: Could not find a declaration file for module 'cors'. '/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/cors/lib/index.js' implicitly has an 'any' type.\n  Try `npm i --save-dev @types/cors` if it exists or add a new declaration (.d.ts) file containing `declare module 'cors';`\nsrc/http-server.ts(29,21): error TS6133: 'req' is declared but its value is never read.\nsrc/http-server.ts(330,24): error TS6133: 'req' is declared but its value is never read.\n[CODE] Build complete\n",
+      "error": "",
+      "completedAt": 1758687457921
     }
   ],
   "lastModified": 1758687456074

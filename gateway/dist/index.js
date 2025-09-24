@@ -226,3 +226,4 @@ main().catch((error) => {
     console.error("Server error:", error);
     process.exit(1);
 });
+//# sourceMappingURL=index.js.map
