@@ -122,7 +122,17 @@
       "result": "6:import { pineconeTools, handlePineconeTool, initContext } from \"./tools/pinecone/pinecone-rag.js\";\n11:dotenv.config({ path: '/Users/eatatjoes/Desktop/Dev/MCP/config/pinecone.env' });\n129:            ...pineconeTools,\n140:    if (pineconeTools.some(tool => tool.name === name)) {\n",
       "error": "",
       "completedAt": 1758687312394
+    },
+    {
+      "id": "cmd_1758687359823_fe4fghg46",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \"\nimport('./dist/tools/pinecone/pinecone-rag.js').then(async ({ handlePineconeTool }) => {\n  console.log('[CODE] Testing Pinecone storage...');\n  const result = await handlePineconeTool('store_context', {\n    content: 'RAG system discovered at 80% complete. Desktop and Code now collaborating to finish setup.',\n    role: 'system',\n    session_id: 'discovery_session_001'\n  });\n  console.log('[CODE] Storage result:', result);\n}).catch(err => console.error('[CODE] Error:', err.message));\n\"",
+      "args": {
+        "description": "Test storing our current conversation to Pinecone. GROUND RULES: DO NOT modify code. ONLY execute the test command and report results."
+      },
+      "status": "running",
+      "timestamp": 1758687359823
     }
   ],
-  "lastModified": 1758687311154
+  "lastModified": 1758687359823
 }
