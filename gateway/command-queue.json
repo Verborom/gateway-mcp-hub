@@ -61,7 +61,17 @@
       "result": "",
       "error": "Command failed: cd /Users/eatatjoes/Desktop/Dev/MCP && docker-compose build gateway\ntime=\"2025-09-23T20:17:58-05:00\" level=warning msg=\"/Users/eatatjoes/Desktop/Dev/MCP/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion\"\n",
       "completedAt": 1758676708008
+    },
+    {
+      "id": "cmd_1758676763756_ps5qedvkc",
+      "type": "shell",
+      "command": "docker images | grep mcp",
+      "args": {
+        "description": "Check if Docker image was built"
+      },
+      "status": "pending",
+      "timestamp": 1758676763756
     }
   ],
-  "lastModified": 1758676677154
+  "lastModified": 1758676763756
 }
