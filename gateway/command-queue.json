@@ -170,8 +170,11 @@
       "args": {
         "description": "Compile the new HTTP server"
       },
-      "status": "running",
-      "timestamp": 1758674419227
+      "status": "completed",
+      "timestamp": 1758674419227,
+      "result": "Command completed with no output",
+      "error": "",
+      "completedAt": 1758674423431
     }
   ],
   "lastModified": 1758674419227
