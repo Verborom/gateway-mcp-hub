@@ -1,56 +1,6 @@
 {
   "commands": [
     {
-      "id": "cmd_1758674378430_23qaw9rac",
-      "type": "shell",
-      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm install express cors @modelcontextprotocol/sdk@latest",
-      "args": {
-        "description": "Install Express and latest MCP SDK for HTTP transport"
-      },
-      "status": "completed",
-      "timestamp": 1758674378430,
-      "result": "stdout:\n\nup to date, audited 132 packages in 1s\n\n22 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
-      "id": "cmd_1758674419227_dka5kq69o",
-      "type": "shell",
-      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npx tsc src/http-server.ts --outDir dist --target ES2022 --module ES2022 --moduleResolution node --esModuleInterop",
-      "args": {
-        "description": "Compile the new HTTP server"
-      },
-      "status": "completed",
-      "timestamp": 1758674419227,
-      "result": "Command completed with no output",
-      "error": "",
-      "completedAt": 1758674423431
-    },
-    {
-      "id": "cmd_1758674433188_ys7awfab2",
-      "type": "shell",
-      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && nohup node dist/http-server.js > http-server.log 2>&1 & echo $!",
-      "args": {
-        "description": "Start the HTTP MCP server in background"
-      },
-      "status": "completed",
-      "timestamp": 1758674433188,
-      "result": "79723\n",
-      "error": "",
-      "completedAt": 1758674463444
-    },
-    {
-      "id": "cmd_1758674484832_8dzscgm5v",
-      "type": "shell",
-      "command": "cp ~/Library/Application\\ Support/Claude/claude_desktop_config.json ~/Library/Application\\ Support/Claude/claude_desktop_config.backup.json && cp /Users/eatatjoes/Desktop/ClaudeSpace/claude_desktop_config_http.json ~/Library/Application\\ Support/Claude/claude_desktop_config.json && echo \"Config updated for HTTP transport\"",
-      "args": {
-        "description": "Backup and update Claude Desktop config for HTTP"
-      },
-      "status": "completed",
-      "timestamp": 1758674484832,
-      "result": "stdout:\nConfig updated for HTTP transport\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
       "id": "cmd_1758674659815_xvi5i3ek6",
       "type": "shell",
       "command": "history > /Users/eatatjoes/Desktop/Dev/MCP/terminal_history_backup_$(date +%Y%m%d_%H%M%S).txt && echo \"Terminal history saved\"",
