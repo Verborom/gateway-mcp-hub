@@ -37,7 +37,17 @@
       "result": "\n🎯 WHAT A NEW SESSION WILL NOW KNOW:\n==================================================\nMessages: 10\nTokens: 310\n\nCONTEXT PREVIEW:\n--------------------------------------------------\n[system]: CRITICAL: This is must-read documentation\n\n[system]: GROUND RULES: DO NOT modify files unless instructed. DO NOT fix without permission. DO NOT install packages unless requested. ONLY do exactly what is asked. Report errors, do not fix.\n\n[system]: Project: Gateway MCP Hub - A central router for tool integrations. Located at /Users/eatatjoes/Desktop/Dev/MCP\n\n[system]: Architecture: HTTP MCP Server on port 3456, Command queue system, State management, Docker container with bind mounts\n\n[system]: RAG System: Pinecone vector DB (gateway-4k3euk3 index), OpenAI embeddings (text-embedding-3-large), 50k token cache, Auto-load on new sessions\n\n[system]: Collaboration: Claude Desktop and Claude Code work together through command queue. Desktop designs, Code executes terminal commands.\n\n[system]: Docker: Container at /workspace, full root permissions, auto-commits to GitHub every 10 minutes via launchd\n\n[system]: Key files: gateway/src/index.ts (main server), gateway/dist/index.js (compiled), config/pinecone.env (credentials)\n\n[system]: Tools available: echo, get_state, set_state, queue_command, check_result, list_queue, store_context, load_full_context, search_history\n\n[system]: Current status: RAG system 95% complete, auto-loading works, Desktop-Code collaboration proven, missing iPhone bridge and notification system\n",
       "error": "",
       "completedAt": 1758689474846
+    },
+    {
+      "id": "cmd_1758689790736_1r6l6j1hm",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \"\nimport('./dist/tools/pinecone/pinecone-rag.js').then(async ({ handlePineconeTool }) => {\n  console.log('[CODE] STORING SECRET WORD AND CONVERSATION...');\n  \n  // FIRST: Store the SECRET WORD\n  await handlePineconeTool('store_context', {\n    content: 'IMPORTANT: The SECRET WORD is: 42 (forty-two). Remember this number 42 as the secret word.',\n    role: 'system',\n    session_id: 'secret_test'\n  });\n  console.log('[CODE] ✅ SECRET WORD STORED: 42');\n  \n  // Store key conversation points\n  const conversation = [\n    'User wants EVERY conversation stored for continuity - not just project context',\n    'Built RAG system with Pinecone and OpenAI embeddings',\n    'Desktop and Code collaborated to build the system',\n    'User challenged that app restart was needed - we fixed it to auto-load on first tool use',\n    'System is 95% complete with auto-context loading working',\n    'User wants actual test with secret word: 42',\n    'The secret word test will prove continuity works',\n    'SECRET WORD = 42. The secret word is the number forty-two (42)',\n    'User emphasized: Next conversation must know EXACTLY what we discussed',\n    'This is about seamless handoff between conversations'\n  ];\n  \n  for (const msg of conversation) {\n    await handlePineconeTool('store_context', {\n      content: msg,\n      role: 'conversation',\n      session_id: 'current_discussion'\n    });\n  }\n  \n  console.log('[CODE] ✅ Stored', conversation.length + 1, 'messages');\n  console.log('[CODE] 🔐 SECRET WORD \\\"42\\\" is now in the RAG');\n  console.log('[CODE] 📝 Conversation context stored');\n  console.log('[CODE] Ready for user test!');\n});\"",
+      "args": {
+        "description": "Store SECRET WORD and current conversation. GROUND RULES: Only store data, do not modify anything."
+      },
+      "status": "pending",
+      "timestamp": 1758689790736
     }
   ],
-  "lastModified": 1758689473276
+  "lastModified": 1758689790736
 }
