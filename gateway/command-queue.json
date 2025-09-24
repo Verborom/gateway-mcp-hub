@@ -73,7 +73,17 @@
       "timestamp": 1758676911447,
       "result": "stdout:\n🚀 Starting MCP Gateway in Docker container...\n60789a6cb951f1c4d1f2f7f24e616bb81fd24ef83988855a42c0ecf06617f3c7\n✅ Container started as 'mcp-gateway'\n📊 Check status with: docker logs mcp-gateway\n🛑 Stop with: docker stop mcp-gateway\n\nstderr:\nUnable to find image 'node:20-slim' locally\n20-slim: Pulling from library/node\nDigest: sha256:d38efce970505168e50665d2350ae7d102204235d7072a1076afbdf227c1ea17\nStatus: Downloaded newer image for node:20-slim\ndocker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:3456 -> 127.0.0.1:0: listen tcp 0.0.0.0:3456: bind: address already in use.\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758676952489_og2vmyoqu",
+      "type": "shell",
+      "command": "lsof -ti:3456 | xargs kill -9 2>/dev/null; echo 'Port 3456 cleared'",
+      "args": {
+        "description": "Kill the HTTP server on port 3456"
+      },
+      "status": "pending",
+      "timestamp": 1758676952489
     }
   ],
-  "lastModified": 1758676913426
+  "lastModified": 1758676952489
 }
