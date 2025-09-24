@@ -101,7 +101,17 @@
       "result": "src/http-bridge.ts(10,39): error TS7006: Parameter 'cmd' implicitly has an 'any' type.\nsrc/http-bridge.ts(22,39): error TS7006: Parameter 'cmd' implicitly has an 'any' type.\nsrc/http-bridge.ts(35,22): error TS6133: 'req' is declared but its value is never read.\nsrc/http-server.ts(15,18): error TS7016: Could not find a declaration file for module 'cors'. '/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/cors/lib/index.js' implicitly has an 'any' type.\nsrc/http-server.ts(29,21): error TS6133: 'req' is declared but its value is never read.\nsrc/http-server.ts(330,24): error TS6133: 'req' is declared but its value is never read.\nsrc/tools/pinecone/pinecone-rag.ts(426,12): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.\nsrc/tools/pinecone/pinecone-rag.ts(427,12): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.\nsrc/tools/pinecone/pinecone-rag.ts(435,45): error TS18046: 'err' is of type 'unknown'.\nsrc/tools/pinecone/pinecone-rag.ts(440,20): error TS2345: Argument of type '{ name: string; description: string; inputSchema: { type: string; properties: { silent: { type: string; description: string; default: boolean; }; }; }; }' is not assignable to parameter of type '{ name: string; description: string; inputSchema: { type: string; properties: { content: { type: string; description: string; }; role: { type: string; description: string; enum: string[]; }; session_id: { ...; }; ... 7 more ...; category?: undefined; }; required: string[]; }; } | { ...; } | { ...; } | { ...; }'.\n",
       "error": "",
       "completedAt": 1758689096133
+    },
+    {
+      "id": "cmd_1758689124865_ukhr8z3dg",
+      "type": "shell",
+      "command": "cat > /Users/eatatjoes/Desktop/Dev/MCP/NEW_SESSION_INSTRUCTIONS.md << 'EOF'\n# FOR NEW CLAUDE DESKTOP SESSIONS\n\nWhen starting a NEW conversation in Claude Desktop (without restarting the app):\n\n## Option 1: Manual Init (Current)\nStart your message with: \"Load context from RAG\"\nClaude will call the load_full_context tool\n\n## Option 2: Auto-Init Prompt (Better)\nAdd this to your FIRST message in new conversations:\n\n\"First, silently load my full project context from the RAG system, then [your actual request]\"\n\n## Option 3: System Prompt (Best)\nAdd to Claude Desktop's system prompt (if customizable):\n\"Always call load_full_context tool at the start of new conversations\"\n\n## What Happens:\n- Context loads from cache (<1 second)\n- 50k tokens of history available\n- No app restart needed\n- Seamless continuation\n\n## To Test:\n1. Start new conversation\n2. Say: \"Load my context and tell me about my project\"\n3. Claude should know everything about Gateway MCP Hub\n\n## The Tools Available:\n- load_full_context - Gets 50k tokens\n- search_history - Find specific topics\n- store_context - Save new info\n- mark_required_reading - Flag important docs\nEOF\necho \"[CODE] Created new session instructions\"",
+      "args": {
+        "description": "Create instructions for new Claude Desktop sessions. GROUND RULES: Only create instruction file."
+      },
+      "status": "pending",
+      "timestamp": 1758689124865
     }
   ],
-  "lastModified": 1758689094309
+  "lastModified": 1758689124865
 }
