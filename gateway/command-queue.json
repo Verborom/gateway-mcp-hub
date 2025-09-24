@@ -123,7 +123,19 @@
       "result": "mcp-gateway\nmcp-gateway\n",
       "error": "",
       "completedAt": 1758677109116
+    },
+    {
+      "id": "cmd_1758677166719_k9lnf1ybz",
+      "type": "shell",
+      "command": "docker run -d --name mcp-gateway --restart unless-stopped -v /Users/eatatjoes/Desktop/Dev/MCP/gateway:/app -v /Users/eatatjoes/Desktop/Dev:/workspace -w /app -p 3456:3456 -p 8080:8080 node:20-slim sh -c 'node dist/http-server.js'",
+      "args": {
+        "description": "Run HTTP server in Docker container"
+      },
+      "status": "completed",
+      "timestamp": 1758677166719,
+      "result": "stdout:\n0c117c2589a8edd45049b248b71cc2555e771e9ac7555b1ee104eecad5dfb80c\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758677108642
+  "lastModified": 1758677167407
 }
