@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "gateway": {
+      "url": "http://localhost:3456/sse"
+    }
+  }
+}
