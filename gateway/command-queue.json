@@ -158,9 +158,11 @@
       "args": {
         "description": "Install Express and latest MCP SDK for HTTP transport"
       },
-      "status": "running",
-      "timestamp": 1758674378430
+      "status": "completed",
+      "timestamp": 1758674378430,
+      "result": "stdout:\n\nup to date, audited 132 packages in 1s\n\n22 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758674379660
+  "lastModified": 1758674380834
 }
