@@ -55,8 +55,11 @@
       "args": {
         "description": "Test the complete Pinecone RAG system - run the test and report the results"
       },
-      "status": "running",
-      "timestamp": 1758683926553
+      "status": "completed",
+      "timestamp": 1758683926553,
+      "result": "Testing Pinecone connection...\n[Cache Miss] Generating embedding for hash ec0965b0...\nStore result: Stored in namespace 'conversations' with ID desktop_1758683926872_ds8q7e5uz\n[Background] Syncing with Pinecone...\nContext loaded successfully!\nFirst 500 chars: {\n  \"source\": \"cache\",\n  \"token_count\": 32,\n  \"message_count\": 2,\n  \"content\": \"[desktop]: RAG system initialized successfully at 2025-09-24T03:17:07.976Z\\n\\n[desktop]: RAG system initialized successfully at 2025-09-24T03:18:46.871Z\"\n}\n[Background] Synced 0 messages (0 tokens)\n",
+      "error": "",
+      "completedAt": 1758683928505
     }
   ],
   "lastModified": 1758683926553
