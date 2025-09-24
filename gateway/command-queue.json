@@ -1,4 +1,15 @@
 {
-  "commands": [],
-  "lastModified": 1758684326033
+  "commands": [
+    {
+      "id": "cmd_1758687077996_gnuadcoja",
+      "type": "shell",
+      "command": "find /Users/eatatjoes/Desktop/Dev/MCP -name \"*pinecone*\" -o -name \"*rag*\" -o -name \"*embed*\" -o -name \"*vector*\" | head -20",
+      "args": {
+        "description": "List all Pinecone/RAG related files. GROUND RULES: DO NOT modify files unless specifically instructed. DO NOT fix issues without explicit permission. DO NOT install packages unless specifically requested. ONLY do exactly what is asked. If errors occur, INVESTIGATE and REPORT, do not fix. Report findings through the queue."
+      },
+      "status": "pending",
+      "timestamp": 1758687077996
+    }
+  ],
+  "lastModified": 1758687077996
 }
