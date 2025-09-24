@@ -247,7 +247,7 @@ export async function handlePineconeTool(name: string, args: any): Promise<strin
       
       // First, load from cache (instant)
       const cachedContext = cache.conversations
-        .map(c => `[${c.role}]: ${c.content}`)
+        .map((c: any) => `[${c.role}]: ${c.content}`)
         .join('\n\n');
       
       if (!args.force_refresh && cachedContext) {
@@ -283,7 +283,7 @@ export async function handlePineconeTool(name: string, args: any): Promise<strin
         includeMetadata: true,
       });
       
-      const matches = results.matches?.map(m => ({
+      const matches = results.matches?.map((m: any) => ({
         score: m.score,
         content: m.metadata?.content,
         role: m.metadata?.role,
@@ -347,9 +347,9 @@ async function syncWithPinecone(tokenLimit: number) {
   const allContent = [
     ...(requiredDocs.matches || []),
     ...(recentConvos.matches || []),
-  ].sort((a, b) => {
-    const aTime = new Date(a.metadata?.timestamp || 0).getTime();
-    const bTime = new Date(b.metadata?.timestamp || 0).getTime();
+  ].sort((a: any, b: any) => {
+    const aTime = new Date(String(a.metadata?.timestamp || 0)).getTime();
+    const bTime = new Date(String(b.metadata?.timestamp || 0)).getTime();
     return bTime - aTime;
   });
   
@@ -359,16 +359,16 @@ async function syncWithPinecone(tokenLimit: number) {
   const content = [];
   
   for (const match of allContent) {
-    const tokens = match.metadata?.tokens || countTokens(match.metadata?.content || '');
-    if (totalTokens + tokens > tokenLimit) break;
+    const tokensValue = match.metadata?.tokens as number || countTokens(String(match.metadata?.content || ''));
+    if (totalTokens + tokensValue > tokenLimit) break;
     
-    totalTokens += tokens;
+    totalTokens += tokensValue;
     conversations.push({
       id: match.id,
       content: match.metadata?.content,
       role: match.metadata?.role || 'system',
       timestamp: match.metadata?.timestamp,
-      tokens,
+      tokens: tokensValue,
     });
     content.push(`[${match.metadata?.role || 'system'}]: ${match.metadata?.content}`);
   }
