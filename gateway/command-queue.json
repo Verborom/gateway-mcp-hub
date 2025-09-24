@@ -86,7 +86,17 @@
       "timestamp": 1758689197357,
       "result": "stdout:\n  Type '{ name: string; description: string; inputSchema: { type: string; properties: { silent: { type: string; description: string; default: boolean; }; }; }; }' is not assignable to type '{ name: string; description: string; inputSchema: { type: string; properties: { content: { type: string; description: string; }; title: { type: string; description: string; }; category: { type: string; description: string; }; ... 7 more ...; top_k?: undefined; }; required: string[]; }; }'.\n    Types of property 'inputSchema' are incompatible.\n      Property 'required' is missing in type '{ type: string; properties: { silent: { type: string; description: string; default: boolean; }; }; }' but required in type '{ type: string; properties: { content: { type: string; description: string; }; title: { type: string; description: string; }; category: { type: string; description: string; }; role?: undefined; session_id?: undefined; ... 5 more ...; top_k?: undefined; }; required: string[]; }'.\n[CODE] Build complete with auto-loading\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758689411591_dn4ik95cd",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \"\nimport('./dist/tools/pinecone/pinecone-rag.js').then(async ({ handlePineconeTool }) => {\n  console.log('📊 WHAT A NEW SESSION WILL KNOW:');\n  console.log('=' + '='.repeat(49));\n  \n  // Load what's actually stored\n  const context = await handlePineconeTool('load_full_context', {\n    token_limit: 50000\n  });\n  \n  const parsed = JSON.parse(context);\n  \n  console.log('\\\\n📝 Total Messages Stored:', parsed.message_count);\n  console.log('📏 Total Tokens:', parsed.token_count);\n  console.log('\\\\n🔍 ACTUAL CONTENT PREVIEW:');\n  console.log('-'.repeat(50));\n  \n  // Show first 1000 chars to see what's actually there\n  console.log(parsed.content.substring(0, 1000));\n  \n  console.log('\\\\n-'.repeat(50));\n  console.log('\\\\n📌 SUMMARY OF WHAT IT KNOWS:');\n  \n  // Parse and summarize\n  const lines = parsed.content.split('\\\\n');\n  const topics = new Set();\n  \n  lines.forEach(line => {\n    if (line.includes('Gateway')) topics.add('Gateway MCP Hub project');\n    if (line.includes('RAG')) topics.add('Pinecone RAG system');\n    if (line.includes('Docker')) topics.add('Docker container setup');\n    if (line.includes('collaboration')) topics.add('Desktop-Code collaboration');\n    if (line.includes('GROUND RULES')) topics.add('Ground rules for Code');\n    if (line.includes('test')) topics.add('Test messages');\n  });\n  \n  topics.forEach(topic => console.log('  ✓', topic));\n  \n  console.log('\\\\n⚠️  REALITY CHECK:');\n  console.log('  - Mostly test messages and ground rules');\n  console.log('  - NOT your full conversation history');\n  console.log('  - NOT the complete project context');\n  console.log('  - Just what we stored during testing');\n}).catch(err => console.error('Error:', err.message));\n\"",
+      "args": {
+        "description": "Show EXACTLY what's stored in the RAG system right now. GROUND RULES: Only read and report, do not modify."
+      },
+      "status": "pending",
+      "timestamp": 1758689411591
     }
   ],
-  "lastModified": 1758689199276
+  "lastModified": 1758689411591
 }
