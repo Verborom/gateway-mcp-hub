@@ -91,8 +91,11 @@
       "args": {
         "description": "Check the context snapshot to see what was stored. GROUND RULES: DO NOT modify. ONLY read first 500 chars to understand structure."
       },
-      "status": "pending",
-      "timestamp": 1758687224966
+      "status": "completed",
+      "timestamp": 1758687224966,
+      "result": "{\n  \"vectors\": {},\n  \"embeddings\": {\n    \"bae8cdf296b703165a26e56a68df48768924e977deab595bdfbaa1b6189dc232\": [\n      -0.032522622495889664,\n      -0.002525582443922758,\n      -0.0042712935246527195,\n      0.002987505868077278,\n      -0.027371473610401154,\n      -0.010982183739542961,\n      -0.02274823747575283,\n      0.07576347142457962,\n      -0.007722722832113504,\n      0.022028356790542603,\n      0.025691751390695572,\n      -0.02362809330224991,\n      0.02796337567269802,\n      -0.03349845856",
+      "error": "",
+      "completedAt": 1758687226282
     }
   ],
   "lastModified": 1758687224966
