@@ -120,8 +120,11 @@
       "args": {
         "description": "Install Pinecone dependencies in the gateway folder for RAG setup"
       },
-      "status": "running",
-      "timestamp": 1758677527625
+      "status": "completed",
+      "timestamp": 1758677527625,
+      "result": "\nadded 2 packages, and audited 134 packages in 2s\n\n22 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n",
+      "error": "",
+      "completedAt": 1758677529971
     }
   ],
   "lastModified": 1758677527625
