@@ -86088,72 +86088,8 @@
       "role": "system",
       "timestamp": "2025-09-24T03:25:25.505Z",
       "tokens": 46
-    },
-    {
-      "id": "system_1758689448642_swz4rjbw2",
-      "content": "Project: Gateway MCP Hub - A central router for tool integrations. Located at /Users/eatatjoes/Desktop/Dev/MCP",
-      "role": "system",
-      "session_id": "project_context",
-      "timestamp": "2025-09-24T04:50:49.891Z",
-      "tokens": 28
-    },
-    {
-      "id": "system_1758689449910_e6olpn6sm",
-      "content": "Architecture: HTTP MCP Server on port 3456, Command queue system, State management, Docker container with bind mounts",
-      "role": "system",
-      "session_id": "project_context",
-      "timestamp": "2025-09-24T04:50:50.622Z",
-      "tokens": 30
-    },
-    {
-      "id": "system_1758689450642_fkdgj2o0d",
-      "content": "RAG System: Pinecone vector DB (gateway-4k3euk3 index), OpenAI embeddings (text-embedding-3-large), 50k token cache, Auto-load on new sessions",
-      "role": "system",
-      "session_id": "project_context",
-      "timestamp": "2025-09-24T04:50:51.725Z",
-      "tokens": 36
-    },
-    {
-      "id": "system_1758689451744_xge0vz1ai",
-      "content": "Collaboration: Claude Desktop and Claude Code work together through command queue. Desktop designs, Code executes terminal commands.",
-      "role": "system",
-      "session_id": "project_context",
-      "timestamp": "2025-09-24T04:50:52.961Z",
-      "tokens": 33
-    },
-    {
-      "id": "system_1758689452976_mmet4tu5s",
-      "content": "Docker: Container at /workspace, full root permissions, auto-commits to GitHub every 10 minutes via launchd",
-      "role": "system",
-      "session_id": "project_context",
-      "timestamp": "2025-09-24T04:50:53.419Z",
-      "tokens": 27
-    },
-    {
-      "id": "system_1758689453431_1ndv5bcy1",
-      "content": "Key files: gateway/src/index.ts (main server), gateway/dist/index.js (compiled), config/pinecone.env (credentials)",
-      "role": "system",
-      "session_id": "project_context",
-      "timestamp": "2025-09-24T04:50:53.793Z",
-      "tokens": 29
-    },
-    {
-      "id": "system_1758689453811_yo2wm43gp",
-      "content": "Tools available: echo, get_state, set_state, queue_command, check_result, list_queue, store_context, load_full_context, search_history",
-      "role": "system",
-      "session_id": "project_context",
-      "timestamp": "2025-09-24T04:50:55.584Z",
-      "tokens": 34
-    },
-    {
-      "id": "system_1758689455614_9i7s6c5h5",
-      "content": "Current status: RAG system 95% complete, auto-loading works, Desktop-Code collaboration proven, missing iPhone bridge and notification system",
-      "role": "system",
-      "session_id": "project_context",
-      "timestamp": "2025-09-24T04:50:56.296Z",
-      "tokens": 36
     }
   ],
-  "lastSync": 1758689446249,
-  "totalTokens": 310
+  "lastSync": 1758689476253,
+  "totalTokens": 57
 }
