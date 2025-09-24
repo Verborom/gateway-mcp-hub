@@ -188,7 +188,17 @@
       "result": "79723\n",
       "error": "",
       "completedAt": 1758674463444
+    },
+    {
+      "id": "cmd_1758674484832_8dzscgm5v",
+      "type": "shell",
+      "command": "cp ~/Library/Application\\ Support/Claude/claude_desktop_config.json ~/Library/Application\\ Support/Claude/claude_desktop_config.backup.json && cp /Users/eatatjoes/Desktop/ClaudeSpace/claude_desktop_config_http.json ~/Library/Application\\ Support/Claude/claude_desktop_config.json && echo \"Config updated for HTTP transport\"",
+      "args": {
+        "description": "Backup and update Claude Desktop config for HTTP"
+      },
+      "status": "pending",
+      "timestamp": 1758674484832
     }
   ],
-  "lastModified": 1758674433188
+  "lastModified": 1758674484832
 }
