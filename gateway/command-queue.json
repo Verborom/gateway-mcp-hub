@@ -175,7 +175,17 @@
       "result": "Command completed with no output",
       "error": "",
       "completedAt": 1758674423431
+    },
+    {
+      "id": "cmd_1758674433188_ys7awfab2",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && nohup node dist/http-server.js > http-server.log 2>&1 & echo $!",
+      "args": {
+        "description": "Start the HTTP MCP server in background"
+      },
+      "status": "running",
+      "timestamp": 1758674433188
     }
   ],
-  "lastModified": 1758674419227
+  "lastModified": 1758674433188
 }
