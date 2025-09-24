@@ -112,7 +112,17 @@
       "timestamp": 1758677397746,
       "result": "stdout:\nNAMES         STATUS                        PORTS\nmcp-gateway   Up 3 minutes                  0.0.0.0:3456->3456/tcp, 0.0.0.0:8080->8080/tcp\neva_sandbox   Exited (255) 12 minutes ago   0.0.0.0:5050->5050/tcp\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758677527625_0e9lwdicd",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm install @pinecone-database/pinecone openai",
+      "args": {
+        "description": "Install Pinecone dependencies in the gateway folder for RAG setup"
+      },
+      "status": "running",
+      "timestamp": 1758677527625
     }
   ],
-  "lastModified": 1758677398487
+  "lastModified": 1758677527625
 }
