@@ -81,7 +81,7 @@
       "args": {
         "description": "Remove duplicate pinecone file and compile just the main index"
       },
-      "status": "pending",
+      "status": "running",
       "timestamp": 1758683454825
     }
   ],
