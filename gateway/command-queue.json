@@ -71,7 +71,17 @@
       "timestamp": 1758687156411,
       "result": "",
       "error": "Command 'cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && nohup node code-daemon-v2.js > /tmp/code-daemon.log 2>&1 & echo \"Started daemon with PID: $!\"' timed out after 30 seconds"
+    },
+    {
+      "id": "cmd_1758687191144_do3h43w28",
+      "type": "shell",
+      "command": "cat /Users/eatatjoes/Desktop/Dev/MCP/config/pinecone.env | sed 's/=.*$/=***MASKED***/'",
+      "args": {
+        "description": "Check if environment variables are loaded. GROUND RULES: DO NOT modify or expose sensitive data. Mask the API keys."
+      },
+      "status": "pending",
+      "timestamp": 1758687191144
     }
   ],
-  "lastModified": 1758687188144
+  "lastModified": 1758687191144
 }
