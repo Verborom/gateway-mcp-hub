@@ -20,8 +20,11 @@
       "args": {
         "description": "Run comprehensive RAG test suite. GROUND RULES: ONLY execute test, do not modify anything. Report full results."
       },
-      "status": "running",
-      "timestamp": 1758688711066
+      "status": "completed",
+      "timestamp": 1758688711066,
+      "result": "\n🔬 DEFINITIVE RAG SYSTEM TEST\n==================================================\n\n📝 TEST 1: Store & Retrieve Message\n[Cache Miss] Generating embedding for hash 4669f1b8...\n[Cache Hit] Embedding for hash 4669f1b8...\nTypeError: found.results[0].includes is not a function\n    at test1_StoreAndRetrieve (file:///Users/eatatjoes/Desktop/Dev/MCP/gateway/test-rag-proof.js:31:73)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async runAllTests (file:///Users/eatatjoes/Desktop/Dev/MCP/gateway/test-rag-proof.js:129:21)\n",
+      "error": "",
+      "completedAt": 1758688714020
     }
   ],
   "lastModified": 1758688711066
