@@ -106,9 +106,9 @@
       "args": {
         "description": "Make script executable and run containerized gateway"
       },
-      "status": "pending",
+      "status": "running",
       "timestamp": 1758676911447
     }
   ],
-  "lastModified": 1758676911447
+  "lastModified": 1758676911917
 }
