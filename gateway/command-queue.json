@@ -61,7 +61,17 @@
       "timestamp": 1758677166719,
       "result": "stdout:\n0c117c2589a8edd45049b248b71cc2555e771e9ac7555b1ee104eecad5dfb80c\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758677242620_w2owvp2ib",
+      "type": "shell",
+      "command": "docker ps | grep mcp-gateway && curl -s http://localhost:3456/health | python3 -m json.tool",
+      "args": {
+        "description": "Check HTTP server container and test health endpoint"
+      },
+      "status": "pending",
+      "timestamp": 1758677242620
     }
   ],
-  "lastModified": 1758677167407
+  "lastModified": 1758677242620
 }
