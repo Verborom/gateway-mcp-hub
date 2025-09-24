@@ -15388,8 +15388,16 @@
       "session_id": "test_session_001",
       "timestamp": "2025-09-24T03:25:22.949Z",
       "tokens": 15
+    },
+    {
+      "id": "desktop_1758684322954_b0svudiv6",
+      "content": "Docker container running on port 3456 with HTTP server",
+      "role": "desktop",
+      "session_id": "test_session_001",
+      "timestamp": "2025-09-24T03:25:23.847Z",
+      "tokens": 14
     }
   ],
   "lastSync": 1758683928488,
-  "totalTokens": 31
+  "totalTokens": 45
 }
