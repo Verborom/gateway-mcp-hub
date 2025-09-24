@@ -94,9 +94,9 @@
       "args": {
         "description": "Run Pinecone test script - DO NOT fix any errors, just report what happens"
       },
-      "status": "pending",
+      "status": "running",
       "timestamp": 1758683826665
     }
   ],
-  "lastModified": 1758683826665
+  "lastModified": 1758683827824
 }
