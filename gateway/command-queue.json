@@ -44,9 +44,11 @@
       "args": {
         "description": "Check if Docker daemon is running now"
       },
-      "status": "running",
-      "timestamp": 1758676663217
+      "status": "completed",
+      "timestamp": 1758676663217,
+      "result": "stdout:\n27.5.1\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758676663683
+  "lastModified": 1758676668885
 }
