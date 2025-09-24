@@ -25,8 +25,11 @@
       "type": "shell",
       "command": "cd /Users/eatatjoes/Desktop/Dev/MCP && ls -la",
       "args": {},
-      "status": "pending",
-      "timestamp": 1758651979992
+      "status": "completed",
+      "timestamp": 1758651979992,
+      "result": "total 184\ndrwxr-xr-x  15 eatatjoes  staff    480 Sep 23 19:35 .\ndrwxr-xr-x@ 18 eatatjoes  staff    576 Sep 23 19:35 ..\n-rw-r--r--@  1 eatatjoes  staff   8196 Sep 23 19:35 .DS_Store\ndrwxr-xr-x@ 14 eatatjoes  staff    448 Sep 23 19:35 .git\n-rw-r--r--@  1 eatatjoes  staff     68 Sep 23 19:13 .gitignore\n-rwxr-xr-x@  1 eatatjoes  staff    748 Sep 23 19:16 auto-commit.sh\ndrwxr-xr-x@ 13 eatatjoes  staff    416 Sep 23 19:35 gateway\n-rw-r--r--@  1 eatatjoes  staff  26470 Sep 23 17:55 HANDOFF.md\n-rw-r--r--@  1 eatatjoes  staff  10583 Sep 23 16:30 PLAN.md\n-rw-r--r--@  1 eatatjoes  staff   6862 Sep 23 01:17 README.md\n-rw-r--r--@  1 eatatjoes  staff   6272 Sep 23 01:17 SETUP.md\n-rw-r--r--@  1 eatatjoes  staff     88 Sep 23 18:48 test-auto-commit.txt\n-rw-r--r--@  1 eatatjoes  staff     37 Sep 23 19:13 test-autocommit.txt\n-rw-r--r--@  1 eatatjoes  staff     52 Sep 23 18:54 test-file.txt\n-rw-r--r--@  1 eatatjoes  staff     37 Sep 23 19:19 test-now.txt\n",
+      "error": "",
+      "completedAt": 1758674231488
     },
     {
       "id": "cmd_1758652947962_rc379d1jn",
@@ -35,31 +38,40 @@
       "args": {
         "description": "Initialize Git repository"
       },
-      "status": "pending",
-      "timestamp": 1758652947962
+      "status": "completed",
+      "timestamp": 1758652947962,
+      "result": "Reinitialized existing Git repository in /Users/eatatjoes/Desktop/Dev/MCP/.git/\n",
+      "error": "",
+      "completedAt": 1758674231501
     },
     {
       "id": "cmd_1758653498383_8zsvb4f0x",
       "type": "shell",
       "command": "echo \"Testing Claude Desktop to Claude Code communication\"",
       "args": {},
-      "status": "pending",
-      "timestamp": 1758653498383
+      "status": "completed",
+      "timestamp": 1758653498383,
+      "result": "Testing Claude Desktop to Claude Code communication\n",
+      "error": "",
+      "completedAt": 1758674231505
     },
     {
       "id": "cmd_1758653643003_iembvc3cd",
       "type": "shell",
       "command": "lsof -i :3000",
       "args": {},
-      "status": "pending",
-      "timestamp": 1758653643003
+      "status": "error",
+      "timestamp": 1758653643003,
+      "result": "",
+      "error": "Command failed: lsof -i :3000\n",
+      "completedAt": 1758674231548
     },
     {
       "id": "cmd_1758653682380_iendnvtuc",
       "type": "shell",
       "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && chmod +x start-services.sh && ./start-services.sh",
       "args": {},
-      "status": "pending",
+      "status": "running",
       "timestamp": 1758653682380
     },
     {
