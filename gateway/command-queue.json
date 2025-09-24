@@ -43,8 +43,11 @@
       "args": {
         "description": "Rebuild gateway with fixed TypeScript"
       },
-      "status": "running",
-      "timestamp": 1758683352630
+      "status": "error",
+      "timestamp": 1758683352630,
+      "result": "",
+      "error": "Command failed: cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm run build\n",
+      "completedAt": 1758683354887
     }
   ],
   "lastModified": 1758683352630
