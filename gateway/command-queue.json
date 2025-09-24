@@ -35,7 +35,17 @@
       "timestamp": 1758687106396,
       "result": "stdout:\ntotal 1368\ndrwxr-xr-x@ 3 eatatjoes  staff      96 Sep 23 22:25 .\ndrwxr-xr-x@ 4 eatatjoes  staff     128 Sep 23 22:25 ..\n-rw-r--r--@ 1 eatatjoes  staff  699951 Sep 23 22:25 context-snapshot.json\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758687118899_ao1xphnd4",
+      "type": "shell",
+      "command": "grep -E \"name:|'[a-z_]+'\" /Users/eatatjoes/Desktop/Dev/MCP/gateway/dist/tools/pinecone/pinecone-rag.js | grep -A1 \"name:\" | head -30",
+      "args": {
+        "description": "List the available Pinecone MCP tools by checking the exports. GROUND RULES: DO NOT modify. ONLY investigate what tools exist."
+      },
+      "status": "pending",
+      "timestamp": 1758687118899
     }
   ],
-  "lastModified": 1758687107837
+  "lastModified": 1758687118899
 }
