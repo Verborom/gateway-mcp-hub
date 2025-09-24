@@ -23,7 +23,17 @@
       "timestamp": 1758683847656,
       "result": "stdout:\n  \n  // Get recent conversations\n  const recentConvos = await index.namespace('conversations').query({\n    vector: new Array(3072).fill(0),\n    topK: 1000,\n    includeMetadata: true,\n    filter: {\n      timestamp: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString() },\n    },\n  });\n  \n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758683879850_27vo0uzkk",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npx tsc src/index.ts src/tools/command-queue.ts src/tools/pinecone/pinecone-rag.ts --outDir dist --target ES2022 --module ES2022 --moduleResolution node --esModuleInterop --skipLibCheck",
+      "args": {
+        "description": "Recompile the Pinecone tools after fixing the timestamp filter - just compile the three main files"
+      },
+      "status": "pending",
+      "timestamp": 1758683879850
     }
   ],
-  "lastModified": 1758683848473
+  "lastModified": 1758683879850
 }
