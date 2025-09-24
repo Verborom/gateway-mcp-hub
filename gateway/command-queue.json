@@ -48,7 +48,17 @@
       "result": "",
       "error": "Command failed: cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm run build\n",
       "completedAt": 1758683354887
+    },
+    {
+      "id": "cmd_1758683374157_6qy2x1382",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npx tsc 2>&1 | head -30",
+      "args": {
+        "description": "Check build errors"
+      },
+      "status": "running",
+      "timestamp": 1758683374157
     }
   ],
-  "lastModified": 1758683352630
+  "lastModified": 1758683374330
 }
