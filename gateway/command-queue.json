@@ -86,7 +86,17 @@
       "timestamp": 1758676786971,
       "result": "",
       "error": "Command 'cd /Users/eatatjoes/Desktop/Dev/MCP && docker-compose build gateway 2>&1 | tail -20' timed out after 30 seconds"
+    },
+    {
+      "id": "cmd_1758676842627_dfgw1l7on",
+      "type": "shell",
+      "command": "docker ps -a",
+      "args": {
+        "description": "Check Docker processes"
+      },
+      "status": "pending",
+      "timestamp": 1758676842627
     }
   ],
-  "lastModified": 1758676817423
+  "lastModified": 1758676842627
 }
