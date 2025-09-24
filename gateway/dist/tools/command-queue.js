@@ -189,4 +189,3 @@ export async function handleCommandQueueTool(name, args) {
             throw new Error(`Unknown command queue tool: ${name}`);
     }
 }
-//# sourceMappingURL=command-queue.js.map

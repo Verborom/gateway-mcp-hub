@@ -81,8 +81,11 @@
       "args": {
         "description": "Remove duplicate pinecone file and compile just the main index"
       },
-      "status": "running",
-      "timestamp": 1758683454825
+      "status": "completed",
+      "timestamp": 1758683454825,
+      "result": "Command completed with no output",
+      "error": "",
+      "completedAt": 1758683456339
     }
   ],
   "lastModified": 1758683454825
