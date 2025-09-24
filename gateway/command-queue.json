@@ -82,9 +82,11 @@
       "args": {
         "description": "Build Docker container with verbose output"
       },
-      "status": "running",
-      "timestamp": 1758676786971
+      "status": "error",
+      "timestamp": 1758676786971,
+      "result": "",
+      "error": "Command 'cd /Users/eatatjoes/Desktop/Dev/MCP && docker-compose build gateway 2>&1 | tail -20' timed out after 30 seconds"
     }
   ],
-  "lastModified": 1758676787406
+  "lastModified": 1758676817423
 }
