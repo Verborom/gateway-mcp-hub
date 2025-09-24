@@ -185,7 +185,17 @@
       },
       "status": "running",
       "timestamp": 1758674433188
+    },
+    {
+      "id": "cmd_1758674451897_d0rayfuwe",
+      "type": "shell",
+      "command": "curl -s http://localhost:3456/health | python3 -m json.tool",
+      "args": {
+        "description": "Check if HTTP server is running"
+      },
+      "status": "pending",
+      "timestamp": 1758674451897
     }
   ],
-  "lastModified": 1758674433188
+  "lastModified": 1758674451897
 }
