@@ -94,9 +94,11 @@
       "args": {
         "description": "Test Pinecone connection with a simple store operation"
       },
-      "status": "pending",
-      "timestamp": 1758683501069
+      "status": "completed",
+      "timestamp": 1758683501069,
+      "result": "stdout:\n\nstderr:\n/bin/sh: -c: line 0: syntax error near unexpected token `('\n/bin/sh: -c: line 0: `cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \\\"const { handlePineconeTool } = require('./dist/tools/pinecone/pinecone-rag.js'); handlePineconeTool('store_context', { content: 'RAG system initialized successfully', role: 'desktop', session_id: 'init' }).then(console.log).catch(console.error)\\\"'\n\nreturn_code: 2",
+      "error": ""
     }
   ],
-  "lastModified": 1758683501069
+  "lastModified": 1758683502338
 }
