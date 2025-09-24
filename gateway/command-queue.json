@@ -48,7 +48,17 @@
       "timestamp": 1758676663217,
       "result": "stdout:\n27.5.1\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758676677154_uvlchcwdx",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP && docker-compose build gateway",
+      "args": {
+        "description": "Build the MCP Gateway Docker container"
+      },
+      "status": "pending",
+      "timestamp": 1758676677154
     }
   ],
-  "lastModified": 1758676668885
+  "lastModified": 1758676677154
 }
