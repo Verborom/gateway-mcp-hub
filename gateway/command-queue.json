@@ -68,9 +68,11 @@
       "args": {
         "description": "Stop old daemon and start new one with progress reporting - DO NOT modify anything else, just restart the daemon"
       },
-      "status": "running",
-      "timestamp": 1758684271817
+      "status": "error",
+      "timestamp": 1758684271817,
+      "result": "",
+      "error": "Command 'pkill -f code-daemon.js && cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node code-daemon-v2.js &' timed out after 30 seconds"
     }
   ],
-  "lastModified": 1758684271869
+  "lastModified": 1758684301883
 }
