@@ -25,7 +25,17 @@
       "result": "Note: Unnecessary use of -X or --request, POST is already inferred.\n* Host localhost:3456 was resolved.\n* IPv6: ::1\n* IPv4: 127.0.0.1\n  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying [::1]:3456...\n* Connected to localhost (::1) port 3456\n> POST /sse HTTP/1.1\r\n> Host: localhost:3456\r\n> User-Agent: curl/8.7.1\r\n> Accept: */*\r\n> Content-Type: application/json\r\n> Content-Length: 119\r\n> \r\n} [119 bytes data]\n* upload completely sent off: 119 bytes\n< HTTP/1.1 400 Bad Request\r\n< X-Powered-By: Express\r\n< Access-Control-Allow-Origin: *\r\n",
       "error": "",
       "completedAt": 1758676069240
+    },
+    {
+      "id": "cmd_1758676489939_e793zzgj1",
+      "type": "shell",
+      "command": "mkdir -p /Users/eatatjoes/Desktop/Dev/MCP/iphone-bridge /Users/eatatjoes/Desktop/Dev/MCP/pinecone /Users/eatatjoes/Desktop/Dev/MCP/data/{state,queue,logs,vectors}",
+      "args": {
+        "description": "Create iPhone bridge directory structure"
+      },
+      "status": "pending",
+      "timestamp": 1758676489939
     }
   ],
-  "lastModified": 1758676068963
+  "lastModified": 1758676489939
 }
