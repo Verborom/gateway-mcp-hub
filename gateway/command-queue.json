@@ -58,9 +58,11 @@
       "args": {
         "description": "Start Docker Desktop app"
       },
-      "status": "running",
-      "timestamp": 1758676626959
+      "status": "completed",
+      "timestamp": 1758676626959,
+      "result": "stdout:\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758676627148
+  "lastModified": 1758676627482
 }
