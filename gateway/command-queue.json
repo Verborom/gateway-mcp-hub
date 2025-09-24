@@ -1,18 +1,6 @@
 {
   "commands": [
     {
-      "id": "cmd_1758683090117_5kwovwxcw",
-      "type": "shell",
-      "command": "mkdir -p /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/tools/{pinecone,phone,pycharm,docker} /Users/eatatjoes/Desktop/Dev/MCP/gateway/cache/pinecone /Users/eatatjoes/Desktop/Dev/MCP/services/{iphone-bridge,pycharm-plugin} /Users/eatatjoes/Desktop/Dev/MCP/config /Users/eatatjoes/Desktop/Dev/MCP/scripts",
-      "args": {
-        "description": "Create organized folder structure for all components"
-      },
-      "status": "completed",
-      "timestamp": 1758683090117,
-      "result": "stdout:\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
       "id": "cmd_1758683262999_ams17dusk",
       "type": "shell",
       "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm install @pinecone-database/pinecone openai dotenv",
