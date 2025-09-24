@@ -6,6 +6,7 @@ import { commandQueueTools, handleCommandQueueTool } from "./tools/command-queue
 import { pineconeTools, handlePineconeTool, initContext } from "./tools/pinecone/pinecone-rag.js";
 import fs from 'fs';
 import process from 'process';
+let contextAutoLoaded = false;
 import dotenv from 'dotenv';
 // Load environment variables
 dotenv.config({ path: '/Users/eatatjoes/Desktop/Dev/MCP/config/pinecone.env' });
@@ -132,6 +133,17 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
 });
 // Handle tool execution
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
+    // Auto-load context on first tool call in new session
+    if (!contextAutoLoaded && process.env.AUTO_LOAD_CONTEXT === "true") {
+        contextAutoLoaded = true;
+        try {
+            await initContext();
+            console.error("[Auto-Context] Loaded for new session");
+        }
+        catch (err) {
+            console.error("[Auto-Context] Failed:", err.message);
+        }
+    }
     const { name, arguments: args } = request.params;
     if (!args) {
         throw new Error(`No arguments provided for tool: ${name}`);
