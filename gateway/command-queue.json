@@ -107,7 +107,17 @@
       },
       "status": "pending",
       "timestamp": 1758663555958
+    },
+    {
+      "id": "cmd_1758673911581_d6a0ztqju",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm test 2>&1 || echo \"No tests configured\"",
+      "args": {
+        "description": "Test npm scripts in gateway project"
+      },
+      "status": "pending",
+      "timestamp": 1758673911581
     }
   ],
-  "lastModified": 1758663555958
+  "lastModified": 1758673911581
 }
