@@ -58,9 +58,11 @@
       "args": {
         "description": "Create the smoking gun test - store unique message, restart, retrieve it. GROUND RULES: ONLY create and run test."
       },
-      "status": "running",
-      "timestamp": 1758688914148
+      "status": "completed",
+      "timestamp": 1758688914148,
+      "result": "stdout:\n🔒 Storing secret: UNIQUE-SECRET-1758688914579\n⏳ Waiting 3 seconds...\n✅ SMOKING GUN: Secret stored and retrieved!\n🎯 PROOF: The RAG system ABSOLUTELY WORKS!\n\nstderr:\n[Cache Miss] Generating embedding for hash 8179d028...\n[Cache Hit] Embedding for hash 8179d028...\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758688914529
+  "lastModified": 1758688918836
 }
