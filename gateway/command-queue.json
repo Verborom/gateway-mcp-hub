@@ -33,9 +33,11 @@
       "args": {
         "description": "Fix test bug and run again. GROUND RULES: Fix ONLY the test file bug, nothing else."
       },
-      "status": "running",
-      "timestamp": 1758688724223
+      "status": "completed",
+      "timestamp": 1758688724223,
+      "result": "stdout:\n\n🔬 DEFINITIVE RAG SYSTEM TEST\n==================================================\n\n📝 TEST 1: Store & Retrieve Message\n[Cache Miss] Generating embedding for hash 7796355a...\n[Cache Hit] Embedding for hash 7796355a...\n✅ PASS: Message stored and retrieved\n\n💾 TEST 2: Local Cache System\nCache exists: true\nCache size: 1367.10 KB\n✅ PASS: Cache operational\n\n📚 TEST 3: Load Full Context (50k tokens)\n[Background] Syncing with Pinecone...\nMessages loaded: 3\nTokens loaded: 66\nFrom cache: No (cloud)\n✅ PASS: Context loads successfully\n\n📖 TEST 4: Required Reading System\n[Cache Miss] Generating embedding for hash f8a25680...\n[Background] Synced 1 messages (46 tokens)\n[Background] Syncing with Pinecone...\n❌ FAIL: Required reading missing\n\n☁️ TEST 5: Pinecone Cloud Connection\n[Cache Miss] Generating embedding for hash 03a52c25...\n[Background] Synced 1 messages (46 tokens)\nCloud search returned: 5 results\n✅ PASS: Pinecone cloud accessible\n\n🧮 TEST 6: OpenAI Embedding Generation\n[Cache Miss] Generating embedding for hash 9813abef...\n✅ PASS: Embeddings generated\n\n==================================================\n📊 FINAL RESULTS:\n==================================================\n✅ store_retrieve\n✅ cache\n✅ context_load\n❌ required_reading\n✅ pinecone\n✅ embeddings\n\n==================================================\n⚠️ 5/6 tests passed. Issues detected.\n==================================================\n\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758688724742
+  "lastModified": 1758688729760
 }
