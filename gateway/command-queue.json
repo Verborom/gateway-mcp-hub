@@ -73,7 +73,17 @@
       "result": "total 32\ndrwxr-xr-x@ 8 eatatjoes  staff   256 Sep 23 22:08 .\ndrwxr-xr-x@ 8 eatatjoes  staff   256 Sep 23 22:08 ..\n-rw-r--r--@ 1 eatatjoes  staff  5836 Sep 23 02:40 command-queue.ts\ndrwxr-xr-x@ 2 eatatjoes  staff    64 Sep 23 22:04 docker\ndrwxr-xr-x@ 2 eatatjoes  staff    64 Sep 23 22:04 phone\ndrwxr-xr-x@ 3 eatatjoes  staff    96 Sep 23 22:08 pinecone\n-rw-r--r--@ 1 eatatjoes  staff  4301 Sep 23 20:13 pinecone-rag.ts\ndrwxr-xr-x@ 2 eatatjoes  staff    64 Sep 23 22:04 pycharm\n",
       "error": "",
       "completedAt": 1758683410972
+    },
+    {
+      "id": "cmd_1758683454825_jzm3lyvcy",
+      "type": "shell",
+      "command": "rm /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/tools/pinecone-rag.ts && cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npx tsc src/index.ts src/tools/command-queue.ts src/tools/pinecone/pinecone-rag.ts --outDir dist --target ES2022 --module ES2022 --moduleResolution node --esModuleInterop --skipLibCheck",
+      "args": {
+        "description": "Remove duplicate pinecone file and compile just the main index"
+      },
+      "status": "pending",
+      "timestamp": 1758683454825
     }
   ],
-  "lastModified": 1758683410436
+  "lastModified": 1758683454825
 }
