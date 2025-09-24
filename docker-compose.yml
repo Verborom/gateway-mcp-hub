@@ -1,27 +1,42 @@
+version: '3.8'
+
 services:
+  # Main MCP Gateway (HTTP Server)
   gateway:
-    build: ./gateway
+    image: node:20-slim
     container_name: mcp-gateway
     restart: unless-stopped
     ports:
-      - "3456:3456"  # HTTP API
-      - "8080:8080"  # Future iPhone bridge
+      - "3456:3456"
+      - "8080:8080"
     volumes:
-      # Persist state between restarts
-      - ./gateway/command-queue.json:/app/command-queue.json
-      # Live code updates (development mode)
-      - ./gateway/src:/app/src
-      - ./gateway/dist:/app/dist
-      # Logs
-      - ./logs:/app/logs
+      - ./gateway:/app
+      - ./:/workspace
+    working_dir: /app
+    command: node dist/http-server.js
     environment:
       - NODE_ENV=development
-      - LOG_LEVEL=info
+    networks:
+      - mcp-net
+
+  # Development Environment Container
+  dev:
+    image: node:20
+    container_name: mcp-dev
     stdin_open: true
     tty: true
+    privileged: true
+    volumes:
+      - ./:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /workspace
+    ports:
+      - "3000-3010:3000-3010"
+      - "5000-5010:5000-5010"
+    command: tail -f /dev/null
     networks:
-      - mcp-network
+      - mcp-net
 
 networks:
-  mcp-network:
+  mcp-net:
     driver: bridge
