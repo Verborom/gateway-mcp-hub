@@ -119,8 +119,11 @@
       "args": {
         "description": "Rebuild the gateway project with new singleton server logic"
       },
-      "status": "running",
-      "timestamp": 1758663315808
+      "status": "error",
+      "timestamp": 1758663315808,
+      "result": "",
+      "error": "Command failed: cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm run build\n",
+      "completedAt": 1758674234843
     },
     {
       "id": "cmd_1758663555958_z1z2z85h3",
@@ -129,8 +132,10 @@
       "args": {
         "description": "Rebuild the gateway to compile TypeScript to JavaScript"
       },
-      "status": "running",
-      "timestamp": 1758663555958
+      "status": "completed",
+      "timestamp": 1758663555958,
+      "result": "stdout:\n\n> gateway@1.0.0 build\n> tsc\n\nsrc/http-bridge-standalone.ts(73,35): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge-standalone.ts(106,28): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge.ts(2,10): error TS2305: Module '\"./tools/command-queue.js\"' has no exported member 'commandQueue'.\nsrc/http-bridge.ts(2,24): error TS2305: Module '\"./tools/command-queue.js\"' has no exported member 'commandResults'.\nsrc/http-bridge.ts(9,29): error TS6133: 'req' is declared but its value is never read.\nsrc/http-bridge.ts(10,39): error TS7006: Parameter 'cmd' implicitly has an 'any' type.\nsrc/http-bridge.ts(22,39): error TS7006: Parameter 'cmd' implicitly has an 'any' type.\nsrc/http-bridge.ts(35,22): error TS6133: 'req' is declared but its value is never read.\n\nstderr:\n\nreturn_code: 2",
+      "error": ""
     },
     {
       "id": "cmd_1758673911581_d6a0ztqju",
@@ -143,5 +148,5 @@
       "timestamp": 1758673911581
     }
   ],
-  "lastModified": 1758674234095
+  "lastModified": 1758674235007
 }
