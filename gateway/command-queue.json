@@ -86,7 +86,17 @@
       "timestamp": 1758683501069,
       "result": "stdout:\n\nstderr:\n/bin/sh: -c: line 0: syntax error near unexpected token `('\n/bin/sh: -c: line 0: `cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \\\"const { handlePineconeTool } = require('./dist/tools/pinecone/pinecone-rag.js'); handlePineconeTool('store_context', { content: 'RAG system initialized successfully', role: 'desktop', session_id: 'init' }).then(console.log).catch(console.error)\\\"'\n\nreturn_code: 2",
       "error": ""
+    },
+    {
+      "id": "cmd_1758683826665_97q3ac4v5",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node test-pinecone.js",
+      "args": {
+        "description": "Run Pinecone test script - DO NOT fix any errors, just report what happens"
+      },
+      "status": "pending",
+      "timestamp": 1758683826665
     }
   ],
-  "lastModified": 1758683502338
+  "lastModified": 1758683826665
 }
