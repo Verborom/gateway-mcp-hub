@@ -111,7 +111,17 @@
       "result": "[CODE] Storing REAL project context...\n[CODE] Stored: Project: Gateway MCP Hub - A central router for to...\n[CODE] Stored: Architecture: HTTP MCP Server on port 3456, Comman...\n[CODE] Stored: RAG System: Pinecone vector DB (gateway-4k3euk3 in...\n[CODE] Stored: Collaboration: Claude Desktop and Claude Code work...\n[CODE] Stored: Docker: Container at /workspace, full root permiss...\n[CODE] Stored: Key files: gateway/src/index.ts (main server), gat...\n[CODE] Stored: Tools available: echo, get_state, set_state, queue...\n[CODE] Stored: Current status: RAG system 95% complete, auto-load...\n[CODE] Stored 8 context messages\n[CODE] New sessions will now know the FULL project!\n",
       "error": "",
       "completedAt": 1758689456329
+    },
+    {
+      "id": "cmd_1758689473276_tobvp4cp5",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \"\nimport('./dist/tools/pinecone/pinecone-rag.js').then(async ({ handlePineconeTool }) => {\n  const context = await handlePineconeTool('load_full_context', { token_limit: 50000 });\n  const parsed = JSON.parse(context);\n  \n  console.log('\\\\n🎯 WHAT A NEW SESSION WILL NOW KNOW:');\n  console.log('='.repeat(50));\n  console.log('Messages:', parsed.message_count);\n  console.log('Tokens:', parsed.token_count);\n  console.log('\\\\nCONTEXT PREVIEW:');\n  console.log('-'.repeat(50));\n  console.log(parsed.content.substring(0, 1500));\n});\"",
+      "args": {
+        "description": "Show what new session will know NOW. GROUND RULES: Only check, do not modify."
+      },
+      "status": "pending",
+      "timestamp": 1758689473276
     }
   ],
-  "lastModified": 1758689447638
+  "lastModified": 1758689473276
 }
