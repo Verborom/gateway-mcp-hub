@@ -94,9 +94,11 @@
       "args": {
         "description": "Check Docker processes"
       },
-      "status": "running",
-      "timestamp": 1758676842627
+      "status": "completed",
+      "timestamp": 1758676842627,
+      "result": "stdout:\nCONTAINER ID   IMAGE                COMMAND       CREATED        STATUS                       PORTS                    NAMES\n7fe11b02a26e   eva_sandbox_backup   \"/bin/bash\"   7 months ago   Exited (255) 3 minutes ago   0.0.0.0:5050->5050/tcp   eva_sandbox\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758676843518
+  "lastModified": 1758676843672
 }
