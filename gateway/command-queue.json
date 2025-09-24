@@ -1,43 +1,6 @@
 {
   "commands": [
     {
-      "id": "cmd_1758676489939_e793zzgj1",
-      "type": "shell",
-      "command": "mkdir -p /Users/eatatjoes/Desktop/Dev/MCP/iphone-bridge /Users/eatatjoes/Desktop/Dev/MCP/pinecone /Users/eatatjoes/Desktop/Dev/MCP/data/{state,queue,logs,vectors}",
-      "args": {
-        "description": "Create iPhone bridge directory structure"
-      },
-      "status": "completed",
-      "timestamp": 1758676489939,
-      "result": "stdout:\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
-      "id": "cmd_1758676613171_zpdw7jwb2",
-      "type": "shell",
-      "command": "docker --version && docker ps",
-      "args": {
-        "description": "Check Docker is installed and running"
-      },
-      "status": "error",
-      "timestamp": 1758676613171,
-      "result": "",
-      "error": "Command failed: docker --version && docker ps\nCannot connect to the Docker daemon at unix:///Users/eatatjoes/.docker/run/docker.sock. Is the docker daemon running?\n",
-      "completedAt": 1758676613909
-    },
-    {
-      "id": "cmd_1758676626959_jd4xu6fzq",
-      "type": "shell",
-      "command": "open -a Docker",
-      "args": {
-        "description": "Start Docker Desktop app"
-      },
-      "status": "completed",
-      "timestamp": 1758676626959,
-      "result": "stdout:\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
       "id": "cmd_1758676663217_hvkm4xzxj",
       "type": "shell",
       "command": "sleep 5 && docker version --format '{{.Server.Version}}'",
