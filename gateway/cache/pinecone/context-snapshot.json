@@ -61496,16 +61496,8 @@
       "role": "system",
       "timestamp": "2025-09-24T03:25:25.505Z",
       "tokens": 46
-    },
-    {
-      "id": "proof_1758688914674_2260yz567",
-      "content": "UNIQUE-SECRET-1758688914579",
-      "role": "proof",
-      "session_id": "smoking_gun",
-      "timestamp": "2025-09-24T04:41:55.657Z",
-      "tokens": 7
     }
   ],
-  "lastSync": 1758688906289,
-  "totalTokens": 64
+  "lastSync": 1758688936368,
+  "totalTokens": 57
 }
