@@ -82,7 +82,7 @@
       "args": {
         "description": "Start the development container with full permissions"
       },
-      "status": "pending",
+      "status": "running",
       "timestamp": 1758677342226
     }
   ],
