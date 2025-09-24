@@ -45,8 +45,11 @@
       "args": {
         "description": "Check Docker is installed and running"
       },
-      "status": "pending",
-      "timestamp": 1758676613171
+      "status": "error",
+      "timestamp": 1758676613171,
+      "result": "",
+      "error": "Command failed: docker --version && docker ps\nCannot connect to the Docker daemon at unix:///Users/eatatjoes/.docker/run/docker.sock. Is the docker daemon running?\n",
+      "completedAt": 1758676613909
     }
   ],
   "lastModified": 1758676613171
