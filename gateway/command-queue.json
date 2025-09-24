@@ -183,21 +183,12 @@
       "args": {
         "description": "Start the HTTP MCP server in background"
       },
-      "status": "running",
-      "timestamp": 1758674433188
-    },
-    {
-      "id": "cmd_1758674451897_d0rayfuwe",
-      "type": "shell",
-      "command": "curl -s http://localhost:3456/health | python3 -m json.tool",
-      "args": {
-        "description": "Check if HTTP server is running"
-      },
       "status": "completed",
-      "timestamp": 1758674451897,
-      "result": "stdout:\n{\n    \"status\": \"healthy\",\n    \"queue_size\": 0,\n    \"state_keys\": 0,\n    \"timestamp\": \"2025-09-24T00:40:53.170Z\"\n}\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
+      "timestamp": 1758674433188,
+      "result": "79723\n",
+      "error": "",
+      "completedAt": 1758674463444
     }
   ],
-  "lastModified": 1758674453197
+  "lastModified": 1758674433188
 }
