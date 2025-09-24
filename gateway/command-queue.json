@@ -83,7 +83,17 @@
       "timestamp": 1758687191144,
       "result": "stdout:\n# Pinecone Configuration\nPINECONE_API_KEY=***MASKED***\nPINECONE_HOST=***MASKED***\nPINECONE_INDEX=***MASKED***\n\n# OpenAI Configuration  \nOPENAI_API_KEY=***MASKED***\n\n# Cache Configuration\nCACHE_DIR=***MASKED***\nCACHE_UPDATE_INTERVAL=***MASKED***\nTOKEN_LIMIT=***MASKED***\n\n# Context Settings\nAUTO_LOAD_CONTEXT=***MASKED***\nCONTEXT_SILENT_LOAD=***MASKED***\nHISTORY_MONTHS=***MASKED***\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758687224966_7bcupoj4a",
+      "type": "shell",
+      "command": "head -c 500 /Users/eatatjoes/Desktop/Dev/MCP/gateway/cache/pinecone/context-snapshot.json",
+      "args": {
+        "description": "Check the context snapshot to see what was stored. GROUND RULES: DO NOT modify. ONLY read first 500 chars to understand structure."
+      },
+      "status": "pending",
+      "timestamp": 1758687224966
     }
   ],
-  "lastModified": 1758687192174
+  "lastModified": 1758687224966
 }
