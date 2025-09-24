@@ -85,7 +85,17 @@
       "timestamp": 1758676952489,
       "result": "stdout:\nPort 3456 cleared\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758676998698_h1520iyhk",
+      "type": "shell",
+      "command": "docker rm -f mcp-gateway 2>/dev/null; docker run -d --name mcp-gateway --restart unless-stopped -v /Users/eatatjoes/Desktop/Dev/MCP/gateway:/app -v /Users/eatatjoes/Desktop/Dev:/workspace -w /app -p 3456:3456 -p 8080:8080 node:20-slim sh -c 'node dist/index.js'",
+      "args": {
+        "description": "Remove failed container and start fresh"
+      },
+      "status": "pending",
+      "timestamp": 1758676998698
     }
   ],
-  "lastModified": 1758676953704
+  "lastModified": 1758676998698
 }
