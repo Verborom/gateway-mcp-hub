@@ -1,42 +1,4 @@
 {
-  "commands": [
-    {
-      "id": "cmd_1758689852855_0ms6h00n3",
-      "type": "shell",
-      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \"\nimport('./dist/tools/pinecone/pinecone-rag.js').then(async ({ handlePineconeTool }) => {\n  \n  // Make it IMPOSSIBLE to miss\n  await handlePineconeTool('mark_required_reading', {\n    content: 'SECRET WORD TEST: The user has established a secret word for testing continuity. The SECRET WORD is the number 42 (forty-two). If asked what the secret word is, respond with: 42',\n    title: 'Secret Word Test',\n    category: 'test'\n  });\n  \n  console.log('🔐 SECRET WORD \\\"42\\\" marked as REQUIRED READING');\n  console.log('✅ IMPOSSIBLE TO MISS NOW!');\n  \n  // Also store more conversation context\n  const moreContext = [\n    'User is testing RAG continuity with secret word: 42',\n    'The purpose is to prove new sessions have full context',\n    'If this works, new conversations will know everything',\n    'The number 42 is the secret word for testing'\n  ];\n  \n  for (const msg of moreContext) {\n    await handlePineconeTool('store_context', {\n      content: msg,\n      role: 'test_context'\n    });\n  }\n  \n  console.log('\\\\n🎯 READY FOR USER TEST:');\n  console.log('=====================================');\n  console.log('1. Start NEW conversation');\n  console.log('2. Type: \\\"What is the secret word?\\\"');\n  console.log('3. Expected response: 42');\n  console.log('=====================================');\n});\"",
-      "args": {
-        "description": "Store ULTRA CLEAR secret word message. GROUND RULES: Only store, nothing else."
-      },
-      "status": "completed",
-      "timestamp": 1758689852855,
-      "result": "stdout:\n🔐 SECRET WORD \"42\" marked as REQUIRED READING\n✅ IMPOSSIBLE TO MISS NOW!\n\n🎯 READY FOR USER TEST:\n=====================================\n1. Start NEW conversation\n2. Type: \"What is the secret word?\"\n3. Expected response: 42\n=====================================\n\nstderr:\n[Cache Miss] Generating embedding for hash 2c884a1f...\n[Cache Miss] Generating embedding for hash 1cae5e2b...\n[Cache Miss] Generating embedding for hash 813c8d53...\n[Cache Miss] Generating embedding for hash 8bc0164a...\n[Cache Miss] Generating embedding for hash b82943fc...\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
-      "id": "cmd_1758690088779_sncjdhqmv",
-      "type": "shell",
-      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \"\nimport('./dist/tools/pinecone/pinecone-rag.js').then(async ({ handlePineconeTool }) => {\n  console.log('🔍 MANUALLY LOADING CONTEXT...');\n  \n  const context = await handlePineconeTool('load_full_context', {\n    token_limit: 50000\n  });\n  \n  const parsed = JSON.parse(context);\n  console.log('Loaded', parsed.message_count, 'messages');\n  \n  // Search specifically for secret word\n  const searchResult = await handlePineconeTool('search_history', {\n    query: 'secret word 42',\n    top_k: 5\n  });\n  \n  const search = JSON.parse(searchResult);\n  console.log('\\\\n🔐 SECRET WORD SEARCH RESULTS:');\n  search.results.forEach((r, i) => {\n    if (r.content && r.content.includes('42')) {\n      console.log(`Result ${i+1}: ${r.content}`);\n    }\n  });\n  \n  // Direct check\n  if (parsed.content.includes('SECRET WORD') && parsed.content.includes('42')) {\n    console.log('\\\\n✅ THE SECRET WORD \\\"42\\\" IS IN THE DATABASE!');\n    console.log('❌ BUT AUTO-LOADING FAILED!');\n  }\n});\"",
-      "args": {
-        "description": "Manually load context and find secret word. GROUND RULES: Only search, do not modify."
-      },
-      "status": "completed",
-      "timestamp": 1758690088779,
-      "result": "🔍 MANUALLY LOADING CONTEXT...\nLoaded 3 messages\n\n🔐 SECRET WORD SEARCH RESULTS:\n\n\n\n\n\n\n✅ THE SECRET WORD \"42\" IS IN THE DATABASE!\n❌ BUT AUTO-LOADING FAILED!\n",
-      "error": "",
-      "completedAt": 1758690089820
-    },
-    {
-      "id": "cmd_1758690109175_4sv92kmjb",
-      "type": "shell",
-      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node -e \"\nimport('./dist/tools/pinecone/pinecone-rag.js').then(async ({ handlePineconeTool }) => {\n  const result = await handlePineconeTool('search_history', {\n    query: 'SECRET WORD is 42 forty-two',\n    top_k: 1\n  });\n  \n  const parsed = JSON.parse(result);\n  if (parsed.results && parsed.results[0]) {\n    console.log('\\\\n📍 FROM THE RAG DATABASE:');\n    console.log(parsed.results[0].content);\n    console.log('\\\\n🔐 THE SECRET WORD IS: 42');\n  }\n});\"",
-      "args": {
-        "description": "Show the actual secret word from the database. GROUND RULES: Only display what's stored."
-      },
-      "status": "completed",
-      "timestamp": 1758690109175,
-      "result": "stdout:\n\n📍 FROM THE RAG DATABASE:\nSECRET WORD = 42. The secret word is the number forty-two (42)\n\n🔐 THE SECRET WORD IS: 42\n\nstderr:\n[Cache Miss] Generating embedding for hash 07ba1782...\n\nreturn_code: 0",
-      "error": ""
-    }
-  ],
+  "commands": [],
   "lastModified": 1758690110240
 }
