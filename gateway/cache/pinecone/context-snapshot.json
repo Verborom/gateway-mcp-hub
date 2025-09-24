@@ -3076,7 +3076,16 @@
       0.01921282336115837
     ]
   },
-  "conversations": [],
+  "conversations": [
+    {
+      "id": "desktop_1758683827979_no91cb4am",
+      "content": "RAG system initialized successfully at 2025-09-24T03:17:07.976Z",
+      "role": "desktop",
+      "session_id": "init_test",
+      "timestamp": "2025-09-24T03:17:10.096Z",
+      "tokens": 16
+    }
+  ],
   "lastSync": 0,
-  "totalTokens": 0
+  "totalTokens": 16
 }

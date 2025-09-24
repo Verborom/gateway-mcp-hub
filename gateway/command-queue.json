@@ -94,9 +94,11 @@
       "args": {
         "description": "Run Pinecone test script - DO NOT fix any errors, just report what happens"
       },
-      "status": "running",
-      "timestamp": 1758683826665
+      "status": "completed",
+      "timestamp": 1758683826665,
+      "result": "stdout:\nTesting Pinecone connection...\nStore result: Stored in namespace 'conversations' with ID desktop_1758683827979_no91cb4am\nContext loaded successfully!\nFirst 500 chars: {\n  \"source\": \"cache\",\n  \"token_count\": 16,\n  \"message_count\": 1,\n  \"content\": \"[desktop]: RAG system initialized successfully at 2025-09-24T03:17:07.976Z\"\n}\n\nstderr:\n[Cache Miss] Generating embedding for hash bae8cdf2...\n[Background] Syncing with Pinecone...\nPineconeBadRequestError: the $gte operator must be followed by a number, got \"2025-08-25T03:17:10.213Z\" instead\n    at mapHttpStatusError (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/errors/http.js:173:20)\n    at handleApiError (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/errors/handling.js:16:46)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.post (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/utils/middleware.js:80:29)\n    at async BaseAPI.fetchApi (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch/db_data/runtime.js:109:32)\n    at async VectorOperationsApi.request (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch/db_data/runtime.js:152:26)\n    at async VectorOperationsApi.queryVectorsRaw (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch/db_data/apis/VectorOperationsApi.js:195:26)\n    at async VectorOperationsApi.queryVectors (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch/db_data/apis/VectorOperationsApi.js:209:26)\n    at async QueryCommand.run (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/data/vectors/query.js:60:25)\n    at async Index.query (/Users/eatatjoes/Desktop/Dev/MCP/gateway/node_modules/@pinecone-database/pinecone/dist/data/index.js:395:16) {\n  cause: undefined\n}\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758683827824
+  "lastModified": 1758683830371
 }
