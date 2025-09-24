@@ -338,8 +338,9 @@ async function syncWithPinecone(tokenLimit: number) {
     vector: new Array(3072).fill(0),
     topK: 1000,
     includeMetadata: true,
+    // Pinecone filter expects Unix timestamp in milliseconds
     filter: {
-      timestamp: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString() },
+      timestamp: { $gte: Date.now() - 30 * 24 * 60 * 60 * 1000 },
     },
   });
   
