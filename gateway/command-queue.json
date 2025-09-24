@@ -74,7 +74,17 @@
       "result": "0c117c2589a8   node:20-slim   \"docker-entrypoint.s…\"   About a minute ago   Up About a minute   0.0.0.0:3456->3456/tcp, 0.0.0.0:8080->8080/tcp   mcp-gateway\n{\n    \"status\": \"healthy\",\n    \"queue_size\": 0,\n    \"state_keys\": 0,\n    \"timestamp\": \"2025-09-24T01:27:23.454Z\"\n}\n",
       "error": "",
       "completedAt": 1758677243481
+    },
+    {
+      "id": "cmd_1758677342226_fmclf9fmo",
+      "type": "shell",
+      "command": "chmod +x /Users/eatatjoes/Desktop/Dev/MCP/start-dev-container.sh && /Users/eatatjoes/Desktop/Dev/MCP/start-dev-container.sh",
+      "args": {
+        "description": "Start the development container with full permissions"
+      },
+      "status": "pending",
+      "timestamp": 1758677342226
     }
   ],
-  "lastModified": 1758677242620
+  "lastModified": 1758677342226
 }
