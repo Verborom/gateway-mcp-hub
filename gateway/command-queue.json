@@ -69,8 +69,11 @@
       "args": {
         "description": "Check if Docker image was built"
       },
-      "status": "pending",
-      "timestamp": 1758676763756
+      "status": "error",
+      "timestamp": 1758676763756,
+      "result": "",
+      "error": "Command failed: docker images | grep mcp\n",
+      "completedAt": 1758676764241
     }
   ],
   "lastModified": 1758676763756
