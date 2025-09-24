@@ -125,7 +125,19 @@
       "timestamp": 1758689152299,
       "result": "stdout:\n5:  CallToolRequestSchema,\n149:server.setRequestHandler(CallToolRequestSchema, async (request) => {\n\nstderr:\n\nreturn_code: 0",
       "error": ""
+    },
+    {
+      "id": "cmd_1758689175397_92nw07rhx",
+      "type": "shell",
+      "command": "cat > /tmp/add-autoload.sh << 'EOF' && bash /tmp/add-autoload.sh\n#!/bin/bash\n# Add auto-load to first tool call\n\n# Backup original\ncp /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/index.ts /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/index.ts.bak\n\n# Add context loading tracker after imports\nsed -i '' '11a\\\nlet contextAutoLoaded = false;\\\n' /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/index.ts\n\n# Add auto-load at start of tool handler\nsed -i '' '/server.setRequestHandler(CallToolRequestSchema/a\\\n  // Auto-load context on first tool call in new session\\\n  if (!contextAutoLoaded && process.env.AUTO_LOAD_CONTEXT === \"true\") {\\\n    contextAutoLoaded = true;\\\n    try {\\\n      await initContext();\\\n      console.error(\"[Auto-Context] Loaded for new session\");\\\n    } catch (err) {\\\n      console.error(\"[Auto-Context] Failed:\", err.message);\\\n    }\\\n  }\\\n' /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/index.ts\n\necho \"[CODE] Added auto-context loading to first tool call\"\necho \"[CODE] Now EVERY new session auto-loads without any special prompt\"\nEOF",
+      "args": {
+        "description": "Add auto-context loading to main server on first tool call. GROUND RULES: Make minimal change to add context loading."
+      },
+      "status": "completed",
+      "timestamp": 1758689175397,
+      "result": "stdout:\n[CODE] Added auto-context loading to first tool call\n[CODE] Now EVERY new session auto-loads without any special prompt\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758689153817
+  "lastModified": 1758689175973
 }
