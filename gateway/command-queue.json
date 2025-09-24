@@ -1,68 +1,6 @@
 {
   "commands": [
     {
-      "id": "cmd_1758676952489_og2vmyoqu",
-      "type": "shell",
-      "command": "lsof -ti:3456 | xargs kill -9 2>/dev/null; echo 'Port 3456 cleared'",
-      "args": {
-        "description": "Kill the HTTP server on port 3456"
-      },
-      "status": "completed",
-      "timestamp": 1758676952489,
-      "result": "stdout:\nPort 3456 cleared\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
-      "id": "cmd_1758676998698_h1520iyhk",
-      "type": "shell",
-      "command": "docker rm -f mcp-gateway 2>/dev/null; docker run -d --name mcp-gateway --restart unless-stopped -v /Users/eatatjoes/Desktop/Dev/MCP/gateway:/app -v /Users/eatatjoes/Desktop/Dev:/workspace -w /app -p 3456:3456 -p 8080:8080 node:20-slim sh -c 'node dist/index.js'",
-      "args": {
-        "description": "Remove failed container and start fresh"
-      },
-      "status": "completed",
-      "timestamp": 1758676998698,
-      "result": "stdout:\nmcp-gateway\n7900c2aafe504ae1e0a91d5a1651c39c479ce84be54be896ec5c077dee7752cd\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
-      "id": "cmd_1758677050133_hptingn2n",
-      "type": "shell",
-      "command": "docker ps | grep mcp-gateway && echo '---LOGS---' && docker logs mcp-gateway 2>&1 | tail -10",
-      "args": {
-        "description": "Check container status and logs"
-      },
-      "status": "completed",
-      "timestamp": 1758677050133,
-      "result": "7900c2aafe50   node:20-slim   \"docker-entrypoint.s…\"   50 seconds ago   Restarting (0) 22 seconds ago             mcp-gateway\n---LOGS---\nRemoved lock file on exit\nCreated lock file with PID 8\nGateway MCP server running on stdio (PID 8)\nRemoved lock file on exit\nCreated lock file with PID 8\nGateway MCP server running on stdio (PID 8)\nRemoved lock file on exit\nCreated lock file with PID 8\nGateway MCP server running on stdio (PID 8)\nRemoved lock file on exit\n",
-      "error": "",
-      "completedAt": 1758677050767
-    },
-    {
-      "id": "cmd_1758677108642_dhghofyb4",
-      "type": "shell",
-      "command": "docker stop mcp-gateway && docker rm mcp-gateway",
-      "args": {
-        "description": "Stop the restarting container"
-      },
-      "status": "completed",
-      "timestamp": 1758677108642,
-      "result": "mcp-gateway\nmcp-gateway\n",
-      "error": "",
-      "completedAt": 1758677109116
-    },
-    {
-      "id": "cmd_1758677166719_k9lnf1ybz",
-      "type": "shell",
-      "command": "docker run -d --name mcp-gateway --restart unless-stopped -v /Users/eatatjoes/Desktop/Dev/MCP/gateway:/app -v /Users/eatatjoes/Desktop/Dev:/workspace -w /app -p 3456:3456 -p 8080:8080 node:20-slim sh -c 'node dist/http-server.js'",
-      "args": {
-        "description": "Run HTTP server in Docker container"
-      },
-      "status": "completed",
-      "timestamp": 1758677166719,
-      "result": "stdout:\n0c117c2589a8edd45049b248b71cc2555e771e9ac7555b1ee104eecad5dfb80c\n\nstderr:\n\nreturn_code: 0",
-      "error": ""
-    },
-    {
       "id": "cmd_1758677242620_w2owvp2ib",
       "type": "shell",
       "command": "docker ps | grep mcp-gateway && curl -s http://localhost:3456/health | python3 -m json.tool",
