@@ -31,9 +31,11 @@
       "args": {
         "description": "Rebuild gateway with Pinecone integration"
       },
-      "status": "running",
-      "timestamp": 1758683282141
+      "status": "completed",
+      "timestamp": 1758683282141,
+      "result": "stdout:\nsrc/tools/pinecone-rag.ts(129,45): error TS7006: Parameter 'match' implicitly has an 'any' type.\nsrc/tools/pinecone/pinecone-rag.ts(250,14): error TS7006: Parameter 'c' implicitly has an 'any' type.\nsrc/tools/pinecone/pinecone-rag.ts(351,28): error TS2769: No overload matches this call.\n  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.\n    Argument of type 'string | number | true | string[]' is not assignable to parameter of type 'string | number | Date'.\n      Type 'boolean' is not assignable to type 'string | number | Date'.\n  Overload 2 of 4, '(value: string | number): Date', gave the following error.\n    Argument of type 'string | number | true | string[]' is not assignable to parameter of type 'string | number'.\n      Type 'boolean' is not assignable to type 'string | number'.\nsrc/tools/pinecone/pinecone-rag.ts(352,28): error TS2769: No overload matches this call.\n  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.\n    Argument of type 'string | number | true | string[]' is not assignable to parameter of type 'string | number | Date'.\n      Type 'boolean' is not assignable to type 'string | number | Date'.\n  Overload 2 of 4, '(value: string | number): Date', gave the following error.\n    Argument of type 'string | number | true | string[]' is not assignable to parameter of type 'string | number'.\n      Type 'boolean' is not assignable to type 'string | number'.\nsrc/tools/pinecone/pinecone-rag.ts(362,58): error TS2345: Argument of type 'string | number | true | string[]' is not assignable to parameter of type 'string'.\n  Type 'number' is not assignable to type 'string'.\nsrc/tools/pinecone/pinecone-rag.ts(363,9): error TS2365: Operator '+' cannot be applied to types 'number' and 'string | number | boolean | string[]'.\nsrc/tools/pinecone/pinecone-rag.ts(365,5): error TS2365: Operator '+=' cannot be applied to types 'number' and 'string | number | boolean | string[]'.\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758683282812
+  "lastModified": 1758683284008
 }

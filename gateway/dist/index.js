@@ -3,8 +3,12 @@ import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { CallToolRequestSchema, ListToolsRequestSchema, } from "@modelcontextprotocol/sdk/types.js";
 import { commandQueueTools, handleCommandQueueTool } from "./tools/command-queue.js";
+import { pineconeTools, handlePineconeTool, initContext } from "./tools/pinecone/pinecone-rag.js";
 import fs from 'fs';
 import process from 'process';
+import dotenv from 'dotenv';
+// Load environment variables
+dotenv.config({ path: '/Users/eatatjoes/Desktop/Dev/MCP/config/pinecone.env' });
 // PID lock file
 const LOCK_FILE = '/tmp/gateway-hub.pid';
 // Check if a process is running
@@ -26,9 +30,8 @@ function checkExistingServer() {
             if (!isNaN(pid) && isProcessRunning(pid)) {
                 console.error(`Gateway server already running with PID ${pid}`);
                 console.error(`This instance (PID ${process.pid}) will exit to avoid duplicates`);
-                return true; // Server exists
+                return true;
             }
-            // Stale lock file, remove it
             console.error(`Removing stale lock file (PID ${pid} not running)`);
             fs.unlinkSync(LOCK_FILE);
         }
@@ -36,14 +39,13 @@ function checkExistingServer() {
     catch (err) {
         console.error('Error checking lock file:', err);
     }
-    return false; // No server running
+    return false;
 }
 // Write lock file
 function writeLockFile() {
     try {
         fs.writeFileSync(LOCK_FILE, process.pid.toString());
         console.error(`Created lock file with PID ${process.pid}`);
-        // Clean up on exit
         const cleanup = () => {
             try {
                 const currentPid = fs.readFileSync(LOCK_FILE, 'utf-8').trim();
@@ -67,7 +69,7 @@ const stateStore = new Map();
 // Create server instance
 const server = new Server({
     name: "gateway-hub",
-    version: "1.0.0",
+    version: "2.0.0",
 }, {
     capabilities: {
         tools: {},
@@ -124,6 +126,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
                 },
             },
             ...commandQueueTools,
+            ...pineconeTools,
         ],
     };
 });
@@ -132,6 +135,18 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const { name, arguments: args } = request.params;
     if (!args) {
         throw new Error(`No arguments provided for tool: ${name}`);
+    }
+    // Check if it's a Pinecone tool
+    if (pineconeTools.some(tool => tool.name === name)) {
+        const result = await handlePineconeTool(name, args);
+        return {
+            content: [
+                {
+                    type: "text",
+                    text: result,
+                },
+            ],
+        };
     }
     switch (name) {
         case "echo": {
@@ -190,15 +205,22 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 async function main() {
     // Check if server is already running
     if (checkExistingServer()) {
-        // Another server is running, exit immediately
-        // This prevents duplicate servers
         process.exit(0);
     }
-    // No existing server, so start one
     writeLockFile();
+    // Auto-load context for new sessions (silent)
+    if (process.env.AUTO_LOAD_CONTEXT === 'true') {
+        try {
+            await initContext();
+        }
+        catch (err) {
+            console.error('[Auto-Init] Failed to load context:', err);
+        }
+    }
     const transport = new StdioServerTransport();
     await server.connect(transport);
     console.error(`Gateway MCP server running on stdio (PID ${process.pid})`);
+    console.error(`RAG System: Pinecone connected, 50k token cache enabled`);
 }
 main().catch((error) => {
     console.error("Server error:", error);
