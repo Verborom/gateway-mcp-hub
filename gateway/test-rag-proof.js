@@ -28,7 +28,7 @@ async function test1_StoreAndRetrieve() {
   });
   
   const found = JSON.parse(searchResult);
-  const success = found.results && found.results[0] && found.results[0].includes(testMsg);
+  const success = found.results && found.results[0] && JSON.stringify(found.results[0]).includes(testMsg);
   
   console.log(success ? '✅ PASS: Message stored and retrieved' : '❌ FAIL: Could not retrieve');
   return success;
