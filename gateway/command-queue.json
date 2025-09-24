@@ -150,7 +150,17 @@
       "result": "\n> gateway@1.0.0 test\n> echo \"Error: no test specified\" && exit 1\n\nError: no test specified\nNo tests configured\n",
       "error": "",
       "completedAt": 1758674235878
+    },
+    {
+      "id": "cmd_1758674378430_23qaw9rac",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && npm install express cors @modelcontextprotocol/sdk@latest",
+      "args": {
+        "description": "Install Express and latest MCP SDK for HTTP transport"
+      },
+      "status": "pending",
+      "timestamp": 1758674378430
     }
   ],
-  "lastModified": 1758673911581
+  "lastModified": 1758674378430
 }
