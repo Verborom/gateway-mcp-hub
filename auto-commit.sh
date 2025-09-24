@@ -11,7 +11,9 @@ fswatch -o /Users/eatatjoes/Desktop/Dev/MCP \
 do
   echo "[$(date)] Change detected, committing..." >> /tmp/gateway-autocommit.log
   git add -A
-  if \! git diff --cached --quiet; then
+  if git diff --cached --quiet; then
+    echo "[$(date)] No changes to commit" >> /tmp/gateway-autocommit.log
+  else
     git commit -m "Auto-commit: $(date '+%Y-%m-%d %H:%M:%S')"
     git push origin main 2>&1 >> /tmp/gateway-autocommit.log
     echo "[$(date)] Committed and pushed" >> /tmp/gateway-autocommit.log
