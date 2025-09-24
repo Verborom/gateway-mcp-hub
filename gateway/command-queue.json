@@ -24,7 +24,19 @@
       "result": "[CODE] Searching for bad cache path...\n",
       "error": "",
       "completedAt": 1758690780466
+    },
+    {
+      "id": "cmd_1758690791038_45sv7h25n",
+      "type": "shell",
+      "command": "echo '[CODE] Checking CACHE_DIR setting...' && grep CACHE_DIR /Users/eatatjoes/Desktop/Dev/MCP/config/pinecone.env",
+      "args": {
+        "description": "Check what CACHE_DIR environment variable is set to. GROUND RULES: Only check and report."
+      },
+      "status": "completed",
+      "timestamp": 1758690791038,
+      "result": "stdout:\n[CODE] Checking CACHE_DIR setting...\nCACHE_DIR=/Users/eatatjoes/Desktop/Dev/MCP/gateway/cache/pinecone\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758690779996
+  "lastModified": 1758690791108
 }
