@@ -117,8 +117,11 @@
       "args": {
         "description": "Check if Pinecone tools are imported in main server. GROUND RULES: DO NOT modify. ONLY check if integration exists."
       },
-      "status": "pending",
-      "timestamp": 1758687311154
+      "status": "completed",
+      "timestamp": 1758687311154,
+      "result": "6:import { pineconeTools, handlePineconeTool, initContext } from \"./tools/pinecone/pinecone-rag.js\";\n11:dotenv.config({ path: '/Users/eatatjoes/Desktop/Dev/MCP/config/pinecone.env' });\n129:            ...pineconeTools,\n140:    if (pineconeTools.some(tool => tool.name === name)) {\n",
+      "error": "",
+      "completedAt": 1758687312394
     }
   ],
   "lastModified": 1758687311154
