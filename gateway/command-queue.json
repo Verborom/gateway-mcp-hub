@@ -72,7 +72,17 @@
       "timestamp": 1758684271817,
       "result": "",
       "error": "Command 'pkill -f code-daemon.js && cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node code-daemon-v2.js &' timed out after 30 seconds"
+    },
+    {
+      "id": "cmd_1758684319832_1r0kumn21",
+      "type": "shell",
+      "command": "cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && node test-rag-complete.js",
+      "args": {
+        "description": "Test the complete RAG system - DO NOT fix errors, just run and report results. Ground rules: ONLY execute, do not modify"
+      },
+      "status": "running",
+      "timestamp": 1758684319832
     }
   ],
-  "lastModified": 1758684301883
+  "lastModified": 1758684319954
 }
