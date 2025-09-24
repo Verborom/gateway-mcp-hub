@@ -100,7 +100,19 @@
       "result": "Command completed with no output",
       "error": "",
       "completedAt": 1758677377588
+    },
+    {
+      "id": "cmd_1758677397746_7co6qskbw",
+      "type": "shell",
+      "command": "docker ps -a --format 'table {{.Names}}\\t{{.Status}}\\t{{.Ports}}'",
+      "args": {
+        "description": "Check all running containers"
+      },
+      "status": "completed",
+      "timestamp": 1758677397746,
+      "result": "stdout:\nNAMES         STATUS                        PORTS\nmcp-gateway   Up 3 minutes                  0.0.0.0:3456->3456/tcp, 0.0.0.0:8080->8080/tcp\neva_sandbox   Exited (255) 12 minutes ago   0.0.0.0:5050->5050/tcp\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758677377336
+  "lastModified": 1758677398487
 }
