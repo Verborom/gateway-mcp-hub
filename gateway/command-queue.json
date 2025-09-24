@@ -82,8 +82,11 @@
       "args": {
         "description": "Start the development container with full permissions"
       },
-      "status": "running",
-      "timestamp": 1758677342226
+      "status": "error",
+      "timestamp": 1758677342226,
+      "result": "",
+      "error": "Command failed: chmod +x /Users/eatatjoes/Desktop/Dev/MCP/start-dev-container.sh && /Users/eatatjoes/Desktop/Dev/MCP/start-dev-container.sh\nUnable to find image 'node:20' locally\n20: Pulling from library/node\n2a74a28f7860: Pulling fs layer\na9331b686701: Pulling fs layer\n133142790bc0: Pulling fs layer\nced3165ecbf9: Pulling fs layer\n568825760640: Pulling fs layer\ne108925666d6: Pulling fs layer\n466a56b828bf: Pulling fs layer\n575d5a21f303: Pulling fs layer\n466a56b828bf: Download complete\n568825760640: Download complete\n575d5a21f303: Download complete\n",
+      "completedAt": 1758677373568
     }
   ],
   "lastModified": 1758677342226
