@@ -135,7 +135,19 @@
       "result": "[CODE] Testing Pinecone storage...\n[CODE] Storage result: Stored in namespace 'conversations' with ID system_1758687360605_02muud40t\n",
       "error": "",
       "completedAt": 1758687362606
+    },
+    {
+      "id": "cmd_1758687404986_ma6kzlivw",
+      "type": "shell",
+      "command": "cat > /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/auto-init.ts << 'EOF'\n/**\n * Auto-initialization for new sessions\n * Loads 50k tokens of context from cache/Pinecone\n */\n\nimport { handlePineconeTool } from './tools/pinecone/pinecone-rag.js';\n\nexport async function autoInitContext(): Promise<void> {\n  if (process.env.AUTO_LOAD_CONTEXT !== 'true') {\n    return;\n  }\n\n  try {\n    console.error('[Auto-Init] Loading context...');\n    \n    // Load 50k tokens from cache/cloud\n    const context = await handlePineconeTool('load_full_context', {\n      token_limit: 50000\n    });\n    \n    const parsed = JSON.parse(context);\n    console.error(`[Auto-Init] Loaded ${parsed.message_count} messages (${parsed.token_count} tokens)`);\n    \n    // Store in global for access\n    global.contextLoaded = true;\n    global.initialContext = parsed;\n    \n  } catch (err) {\n    console.error('[Auto-Init] Failed to load context:', err);\n  }\n}\nEOF\necho \"[CODE] Created auto-init.ts\"",
+      "args": {
+        "description": "Create auto-init script that loads context on new sessions. GROUND RULES: Create new file ONLY, do not modify existing files."
+      },
+      "status": "completed",
+      "timestamp": 1758687404986,
+      "result": "stdout:\n[CODE] Created auto-init.ts\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758687359823
+  "lastModified": 1758687405064
 }
