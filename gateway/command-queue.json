@@ -93,9 +93,11 @@
       "args": {
         "description": "Remove failed container and start fresh"
       },
-      "status": "pending",
-      "timestamp": 1758676998698
+      "status": "completed",
+      "timestamp": 1758676998698,
+      "result": "stdout:\nmcp-gateway\n7900c2aafe504ae1e0a91d5a1651c39c479ce84be54be896ec5c077dee7752cd\n\nstderr:\n\nreturn_code: 0",
+      "error": ""
     }
   ],
-  "lastModified": 1758676998698
+  "lastModified": 1758677000423
 }
