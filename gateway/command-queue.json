@@ -75,7 +75,17 @@
       "result": "[CODE] Created context manager for seamless sessions\n",
       "error": "",
       "completedAt": 1758689060846
+    },
+    {
+      "id": "cmd_1758689082216_1hdsu9r2c",
+      "type": "shell",
+      "command": "cat >> /Users/eatatjoes/Desktop/Dev/MCP/gateway/src/tools/pinecone/pinecone-rag.ts << 'EOF'\n\n// AUTO-INIT TOOL FOR NEW SESSIONS\nexport const initSessionTool = {\n  name: \"init_session\",\n  description: \"Initialize new session with full context - call this FIRST in new conversations\",\n  inputSchema: {\n    type: \"object\",\n    properties: {\n      silent: {\n        type: \"boolean\",\n        description: \"Load silently without output\",\n        default: true\n      }\n    }\n  }\n};\n\nexport async function handleInitSession(args: any): Promise<string> {\n  try {\n    const context = await handlePineconeTool('load_full_context', {\n      token_limit: 50000\n    });\n    \n    const parsed = JSON.parse(context);\n    \n    // Store in memory for this session\n    global.sessionContext = parsed;\n    global.sessionInitialized = true;\n    \n    if (!args.silent) {\n      return `Session initialized with ${parsed.message_count} messages (${parsed.token_count} tokens)`;\n    }\n    \n    return \"Session context loaded successfully\";\n  } catch (err) {\n    return `Failed to initialize session: ${err.message}`;\n  }\n}\n\n// Add to exports\npineconeTools.push(initSessionTool);\nEOF\necho \"[CODE] Added init_session tool\"",
+      "args": {
+        "description": "Add init_session tool to MCP that new conversations can call. GROUND RULES: Only add to existing file, do not break anything."
+      },
+      "status": "pending",
+      "timestamp": 1758689082216
     }
   ],
-  "lastModified": 1758689060688
+  "lastModified": 1758689082216
 }
