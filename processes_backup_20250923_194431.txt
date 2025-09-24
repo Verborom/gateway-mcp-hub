@@ -1,5 +1,0 @@
-eatatjoes        82534   0.0  0.0 410060096    432   ??  RN    7:44PM   0:00.00 grep -E (code-daemon|http-server)
-eatatjoes        82532   0.0  0.0 410734048   2112   ??  SN    7:44PM   0:00.01 /bin/sh -c ps aux | grep -E '(code-daemon|http-server)' > /Users/eatatjoes/Desktop/Dev/MCP/processes_backup_$(date +%Y%m%d_%H%M%S).txt && cp /Users/eatatjoes/Desktop/Dev/MCP/gateway/http-server.log /Users/eatatjoes/Desktop/Dev/MCP/http_server_backup_$(date +%Y%m%d_%H%M%S).log 2>/dev/null; echo "Process info and logs backed up"
-eatatjoes        79724   0.0  0.1 422292736  29760   ??  SN    7:40PM   0:00.18 node dist/http-server.js
-eatatjoes        79723   0.0  0.0 410736096    608   ??  SN    7:40PM   0:00.00 /bin/sh -c cd /Users/eatatjoes/Desktop/Dev/MCP/gateway && nohup node dist/http-server.js > http-server.log 2>&1 & echo $!
-eatatjoes        75905   0.0  0.1 411910752  30576   ??  SN    7:37PM   0:00.27 node code-daemon.js
